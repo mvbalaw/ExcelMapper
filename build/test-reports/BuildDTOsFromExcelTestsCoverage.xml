@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="coverage.xsl" type="text/xsl"?>
+<!-- saved from url=(0022)http://www.ncover.org/ -->
+<coverage>
+  <module name="C:\Users\sshetty\AppData\Local\Temp\nunit20\ShadowCopyCache\183320_633773043326580818\Tests\assembly\dl3\e62811b3\08657160_4ccfc901\BuildDTOsFromExcel.Tests.DLL" assembly="BuildDTOsFromExcel.Tests">
+    <method name="SetUp" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files">
+      <seqpnt visitcount="1" line="23" column="13" endline="23" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="24" column="17" endline="24" endcolumn="88" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="25" column="17" endline="25" endcolumn="66" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="27" column="17" endline="31" endcolumn="23" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="32" column="13" endline="32" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_return_the_list_of_files" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files">
+      <seqpnt visitcount="1" line="36" column="13" endline="36" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="37" column="17" endline="37" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="38" column="17" endline="38" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="39" column="17" endline="39" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="40" column="17" endline="40" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="41" column="13" endline="41" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="SetUp" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="6" line="60" column="13" endline="60" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="61" column="17" endline="61" endcolumn="88" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="62" column="17" endline="62" endcolumn="66" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="64" column="17" endline="68" endcolumn="23" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="70" column="17" endline="74" endcolumn="23" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="76" column="17" endline="80" endcolumn="23" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="81" column="13" endline="81" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_current_directory_for_the_xlsx_searchpattern" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="85" column="13" endline="85" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="86" column="17" endline="86" endcolumn="47" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="88" column="17" endline="88" endcolumn="156" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="90" column="17" endline="90" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="91" column="17" endline="91" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="92" column="17" endline="92" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="93" column="13" endline="93" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_given_directory_for_the_xlsx_searchpattern" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="97" column="13" endline="97" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="98" column="17" endline="98" endcolumn="56" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="100" column="17" endline="100" endcolumn="134" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="102" column="17" endline="102" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="103" column="17" endline="103" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="104" column="17" endline="104" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="105" column="13" endline="105" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_current_directory_for_the_xls_searchpattern" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="109" column="13" endline="109" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="110" column="17" endline="110" endcolumn="46" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="112" column="17" endline="112" endcolumn="154" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="114" column="17" endline="114" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="115" column="17" endline="115" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="116" column="17" endline="116" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="117" column="13" endline="117" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_given_directory_for_the_xls_searchpattern" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="121" column="13" endline="121" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="122" column="17" endline="122" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="124" column="17" endline="124" endcolumn="133" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="126" column="17" endline="126" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="127" column="17" endline="127" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="128" column="17" endline="128" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="129" column="13" endline="129" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="133" column="13" endline="133" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="134" column="17" endline="134" endcolumn="46" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="135" column="17" endline="135" endcolumn="47" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="137" column="17" endline="137" endcolumn="154" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="138" column="17" endline="138" endcolumn="156" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="140" column="17" endline="140" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="141" column="17" endline="141" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="142" column="17" endline="142" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="143" column="17" endline="143" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="144" column="13" endline="144" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="148" column="13" endline="148" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="149" column="17" endline="149" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="150" column="17" endline="150" endcolumn="56" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="152" column="17" endline="152" endcolumn="133" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="153" column="17" endline="153" endcolumn="134" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="155" column="17" endline="155" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="156" column="17" endline="156" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="157" column="17" endline="157" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="158" column="17" endline="158" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="159" column="13" endline="159" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_current_directory_for_the_xlsx_searchpattern&gt;b__4" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="88" column="48" endline="88" endcolumn="110" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_current_directory_for_the_xlsx_searchpattern&gt;b__5" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="92" column="55" endline="92" endcolumn="78" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_given_directory_for_the_xlsx_searchpattern&gt;b__8" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="100" column="48" endline="100" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_given_directory_for_the_xlsx_searchpattern&gt;b__9" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="104" column="55" endline="104" endcolumn="78" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_current_directory_for_the_xls_searchpattern&gt;b__c" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="112" column="48" endline="112" endcolumn="109" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_current_directory_for_the_xls_searchpattern&gt;b__d" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="116" column="55" endline="116" endcolumn="77" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_given_directory_for_the_xls_searchpattern&gt;b__10" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="124" column="48" endline="124" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_given_directory_for_the_xls_searchpattern&gt;b__11" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="128" column="55" endline="128" endcolumn="77" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__14" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="137" column="48" endline="137" endcolumn="109" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__15" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="138" column="48" endline="138" endcolumn="110" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__16" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="142" column="55" endline="142" endcolumn="77" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__17" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="6" line="143" column="55" endline="143" endcolumn="78" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__1c" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="152" column="48" endline="152" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__1d" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="1" line="153" column="48" endline="153" endcolumn="70" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__1e" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="3" line="157" column="55" endline="157" endcolumn="77" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="&lt;Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given&gt;b__1f" class="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern">
+      <seqpnt visitcount="6" line="158" column="55" endline="158" endcolumn="78" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+      <seqpnt visitcount="6" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\FileParserTests.cs" />
+    </method>
+    <method name="Should_return_the_assembly_name_it_if_it_exists_in_the_array_of_arguments" class="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_an_AssemblyName">
+      <seqpnt visitcount="1" line="16" column="13" endline="16" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="17" column="17" endline="17" endcolumn="84" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="18" column="17" endline="18" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="19" column="17" endline="19" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="20" column="13" endline="20" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+    </method>
+    <method name="Should_return_the_default_assembly_name_it_if_it_exists_in_the_array_of_arguments" class="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_an_AssemblyName">
+      <seqpnt visitcount="1" line="24" column="13" endline="24" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="25" column="17" endline="25" endcolumn="60" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="26" column="17" endline="26" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="27" column="17" endline="27" endcolumn="73" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="28" column="13" endline="28" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+    </method>
+    <method name="Should_return_the_file_names_that_are_in_the_array_of_arguments" class="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_files">
+      <seqpnt visitcount="1" line="36" column="13" endline="36" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="37" column="17" endline="37" endcolumn="94" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="38" column="17" endline="38" endcolumn="54" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="39" column="17" endline="39" endcolumn="49" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="40" column="17" endline="40" endcolumn="85" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="1" line="41" column="13" endline="41" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+    </method>
+    <method name="&lt;Should_return_the_file_names_that_are_in_the_array_of_arguments&gt;b__0" class="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_files">
+      <seqpnt visitcount="3" line="40" column="50" endline="40" endcolumn="82" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel.Tests\ExtensionTests.cs" />
+    </method>
+  </module>
+  <module name="C:\Users\sshetty\AppData\Local\Temp\nunit20\ShadowCopyCache\183320_633773043326580818\Tests\assembly\dl3\c03f3c51\edff3960_4ccfc901\BuildDTOsFromExcel.EXE" assembly="BuildDTOsFromExcel">
+    <method name="Run" class="BuildDTOsFromExcel.Engine">
+      <seqpnt visitcount="0" line="15" column="9" endline="15" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+      <seqpnt visitcount="0" line="16" column="13" endline="16" endcolumn="47" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+      <seqpnt visitcount="0" line="18" column="13" endline="18" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+      <seqpnt visitcount="0" line="19" column="13" endline="19" endcolumn="130" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="22" endcolumn="111" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+      <seqpnt visitcount="0" line="23" column="9" endline="23" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Engine.cs" />
+    </method>
+    <method name="GetFiles" class="BuildDTOsFromExcel.Extensions">
+      <seqpnt visitcount="1" line="14" column="9" endline="14" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="1" line="15" column="13" endline="15" endcolumn="90" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="1" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+    </method>
+    <method name="GetAssemblyName" class="BuildDTOsFromExcel.Extensions">
+      <seqpnt visitcount="2" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="2" line="20" column="13" endline="20" endcolumn="88" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="2" line="21" column="13" endline="21" endcolumn="131" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="2" line="22" column="9" endline="22" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+    </method>
+    <method name="&lt;GetFiles&gt;b__0" class="BuildDTOsFromExcel.Extensions">
+      <seqpnt visitcount="4" line="15" column="47" endline="15" endcolumn="79" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="4" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+    </method>
+    <method name="&lt;GetAssemblyName&gt;b__2" class="BuildDTOsFromExcel.Extensions">
+      <seqpnt visitcount="3" line="20" column="55" endline="20" endcolumn="86" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+      <seqpnt visitcount="3" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Extensions.cs" />
+    </method>
+    <method name=".ctor" class="BuildDTOsFromExcel.FileParser">
+      <seqpnt visitcount="7" line="15" column="9" endline="15" endcolumn="64" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="17" column="13" endline="17" endcolumn="52" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="18" column="9" endline="18" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+    </method>
+    <method name="Parse" class="BuildDTOsFromExcel.FileParser">
+      <seqpnt visitcount="7" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="22" column="13" endline="22" endcolumn="133" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="23" column="13" endline="23" endcolumn="132" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="24" column="13" endline="24" endcolumn="20" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="24" column="37" endline="24" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="24" column="22" endline="24" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="25" column="13" endline="25" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="26" column="17" endline="26" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="27" column="13" endline="27" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="15" line="24" column="34" endline="24" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="15" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="28" column="13" endline="28" endcolumn="40" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="7" line="29" column="9" endline="29" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+    </method>
+    <method name="GetFiles" class="BuildDTOsFromExcel.FileParser">
+      <seqpnt visitcount="8" line="32" column="9" endline="32" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="33" column="13" endline="33" endcolumn="60" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="34" column="13" endline="34" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="35" column="13" endline="35" endcolumn="49" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="4" line="36" column="13" endline="36" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="4" line="37" column="17" endline="37" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="4" line="38" column="13" endline="38" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="39" column="13" endline="39" endcolumn="74" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="8" line="40" column="9" endline="40" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+    </method>
+    <method name="&lt;Parse&gt;b__0" class="BuildDTOsFromExcel.FileParser">
+      <seqpnt visitcount="22" line="22" column="70" endline="22" endcolumn="131" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="22" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+    </method>
+    <method name="&lt;Parse&gt;b__1" class="BuildDTOsFromExcel.FileParser">
+      <seqpnt visitcount="22" line="23" column="67" endline="23" endcolumn="130" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+      <seqpnt visitcount="22" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\FileParser.cs" />
+    </method>
+    <method name="Main" class="BuildDTOsFromExcel.Program">
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="9" column="13" endline="9" endcolumn="34" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="11" column="17" endline="11" endcolumn="32" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="12" column="17" endline="12" endcolumn="24" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="15" column="13" endline="15" endcolumn="56" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="16" column="13" endline="16" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="17" column="17" endline="17" endcolumn="32" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="18" column="17" endline="18" endcolumn="24" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="21" column="13" endline="21" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="22" column="9" endline="22" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+    </method>
+    <method name="DisplayUsage" class="BuildDTOsFromExcel.Program">
+      <seqpnt visitcount="0" line="25" column="9" endline="25" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="124" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="27" column="13" endline="27" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="28" column="13" endline="28" endcolumn="98" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="29" column="13" endline="29" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="30" column="13" endline="30" endcolumn="105" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="31" column="13" endline="31" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="32" column="13" endline="32" endcolumn="94" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="33" column="13" endline="33" endcolumn="115" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="34" column="13" endline="34" endcolumn="103" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+      <seqpnt visitcount="0" line="35" column="9" endline="35" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\BuildDTOsFromExcel\Program.cs" />
+    </method>
+  </module>
+  <module name="C:\Users\sshetty\AppData\Local\Temp\nunit20\ShadowCopyCache\183320_633773043326580818\Tests\assembly\dl3\b6990e4c\08432360_4ccfc901\ExcelMapper.DLL" assembly="ExcelMapper">
+    <method name="Initialize" class="ExcelMapper.Configuration.BootStrapper">
+      <seqpnt visitcount="0" line="10" column="9" endline="10" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="11" column="13" endline="16" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="17" column="9" endline="17" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+    </method>
+    <method name="Reset" class="ExcelMapper.Configuration.BootStrapper">
+      <seqpnt visitcount="0" line="20" column="9" endline="20" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="21" column="13" endline="21" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="22" column="13" endline="22" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="23" column="17" endline="23" endcolumn="47" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="24" column="13" endline="24" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="27" column="17" endline="27" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="28" column="17" endline="28" endcolumn="37" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="29" column="13" endline="29" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="30" column="9" endline="30" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+    </method>
+    <method name="&lt;Initialize&gt;b__0" class="ExcelMapper.Configuration.BootStrapper">
+      <seqpnt visitcount="0" line="11" column="43" endline="16" endcolumn="56" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+    </method>
+    <method name="&lt;Initialize&gt;b__1" class="ExcelMapper.Configuration.BootStrapper">
+      <seqpnt visitcount="0" line="12" column="54" endline="12" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="13" column="58" endline="13" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="14" column="58" endline="14" endcolumn="85" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="15" column="58" endline="15" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\BootStrapper.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.Configuration.ExcelMapperRegistry">
+      <seqpnt visitcount="0" line="10" column="9" endline="10" endcolumn="37" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperRegistry.cs" />
+      <seqpnt visitcount="0" line="11" column="9" endline="11" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperRegistry.cs" />
+      <seqpnt visitcount="0" line="12" column="13" endline="13" endcolumn="65" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperRegistry.cs" />
+      <seqpnt visitcount="0" line="14" column="13" endline="15" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperRegistry.cs" />
+      <seqpnt visitcount="0" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperRegistry.cs" />
+    </method>
+    <method name="DoGetAllInstances" class="ExcelMapper.Configuration.StructureMapServiceLocator">
+      <seqpnt visitcount="0" line="14" column="9" endline="14" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+      <seqpnt visitcount="0" line="15" column="13" endline="15" endcolumn="93" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+      <seqpnt visitcount="0" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+    </method>
+    <method name="DoGetInstance" class="ExcelMapper.Configuration.StructureMapServiceLocator">
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="140" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\StructureMapServiceLocator.cs" />
+    </method>
+    <method name=".cctor" class="ExcelMapper.DefaultSettings">
+      <seqpnt visitcount="1" line="5" column="9" endline="5" endcolumn="64" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DefaultSettings.cs" />
+      <seqpnt visitcount="1" line="6" column="9" endline="6" endcolumn="63" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DefaultSettings.cs" />
+      <seqpnt visitcount="1" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DefaultSettings.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.DTO.AssemblyProperties">
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="20" column="9" endline="20" endcolumn="60" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="47" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="9" column="9" endline="9" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="25" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="11" column="9" endline="11" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+    </method>
+    <method name="get_FullName" class="ExcelMapper.DTO.AssemblyProperties">
+      <seqpnt visitcount="0" line="16" column="17" endline="16" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="16" column="19" endline="16" endcolumn="57" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="16" column="58" endline="16" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+    </method>
+    <method name="AddReference" class="ExcelMapper.DTO.AssemblyProperties">
+      <seqpnt visitcount="0" line="23" column="9" endline="23" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="24" column="13" endline="24" endcolumn="39" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="25" column="9" endline="25" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+    </method>
+    <method name="AddResource" class="ExcelMapper.DTO.AssemblyProperties">
+      <seqpnt visitcount="0" line="28" column="9" endline="28" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="29" column="13" endline="29" endcolumn="38" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+      <seqpnt visitcount="0" line="30" column="9" endline="30" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\AssemblyProperties.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.DTO.ClassProperties">
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="22" column="9" endline="22" endcolumn="63" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="9" column="9" endline="9" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="25" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="11" column="9" endline="11" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+    </method>
+    <method name="get_FullName" class="ExcelMapper.DTO.ClassProperties">
+      <seqpnt visitcount="0" line="17" column="17" endline="17" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="17" column="19" endline="17" endcolumn="56" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="17" column="57" endline="17" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+    </method>
+    <method name="AddProperty" class="ExcelMapper.DTO.ClassProperties">
+      <seqpnt visitcount="0" line="25" column="9" endline="25" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="32" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="27" column="9" endline="27" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+    </method>
+    <method name="AddPropertyType" class="ExcelMapper.DTO.ClassProperties">
+      <seqpnt visitcount="0" line="30" column="9" endline="30" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="31" column="13" endline="31" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+      <seqpnt visitcount="0" line="32" column="9" endline="32" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\DTO\ClassProperties.cs" />
+    </method>
+    <method name="SetUp" class="ExcelMapper.Configuration.ExcelMapperServiceLocator">
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+      <seqpnt visitcount="0" line="9" column="13" endline="9" endcolumn="87" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="34" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+      <seqpnt visitcount="0" line="11" column="9" endline="11" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+    </method>
+    <method name="&lt;SetUp&gt;b__0" class="ExcelMapper.Configuration.ExcelMapperServiceLocator">
+      <seqpnt visitcount="0" line="9" column="53" endline="9" endcolumn="85" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Configuration\ExcelMapperServiceLocator.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.ExcelToDTOMapper">
+      <seqpnt visitcount="0" line="15" column="9" endline="15" endcolumn="131" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="17" column="13" endline="17" endcolumn="48" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="18" column="13" endline="18" endcolumn="46" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="19" column="13" endline="19" endcolumn="52" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="20" column="9" endline="20" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+    </method>
+    <method name="Run" class="ExcelMapper.ExcelToDTOMapper">
+      <seqpnt visitcount="0" line="23" column="9" endline="23" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="24" column="13" endline="24" endcolumn="85" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="20" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="26" column="37" endline="26" endcolumn="42" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="26" column="22" endline="26" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="27" column="13" endline="27" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="28" column="17" endline="28" endcolumn="24" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="28" column="46" endline="28" endcolumn="86" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="28" column="26" endline="28" endcolumn="42" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="29" column="17" endline="29" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="30" column="21" endline="30" endcolumn="108" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="31" column="21" endline="31" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="33" column="21" endline="33" endcolumn="104" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="34" column="21" endline="34" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="35" column="25" endline="35" endcolumn="34" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="37" column="21" endline="37" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="38" column="21" endline="38" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="39" column="17" endline="39" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="28" column="43" endline="28" endcolumn="45" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="40" column="13" endline="40" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="26" column="34" endline="26" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="41" column="13" endline="42" endcolumn="136" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+      <seqpnt visitcount="0" line="43" column="9" endline="43" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\ExcelToDTOMapper.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.Repository.Connection.Connection">
+      <seqpnt visitcount="0" line="9" column="9" endline="9" endcolumn="62" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="10" column="9" endline="10" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="11" column="13" endline="11" endcolumn="50" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="12" column="9" endline="12" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+    </method>
+    <method name="GetConnection" class="ExcelMapper.Repository.Connection.Connection">
+      <seqpnt visitcount="0" line="15" column="9" endline="15" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="16" column="13" endline="16" endcolumn="91" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="17" column="13" endline="17" endcolumn="31" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="18" column="13" endline="18" endcolumn="31" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\Connection.cs" />
+    </method>
+    <method name="Get" class="ExcelMapper.Repository.Connection.ConnectionString">
+      <seqpnt visitcount="0" line="9" column="9" endline="9" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="60" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="12" column="13" endline="12" endcolumn="83" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="13" column="13" endline="13" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="14" column="17" endline="14" endcolumn="168" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="16" column="13" endline="16" endcolumn="82" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="17" column="13" endline="17" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="18" column="17" endline="18" endcolumn="162" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="68" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+    </method>
+    <method name="CreateConnectionStringWithDataSource" class="ExcelMapper.Repository.Connection.ConnectionString">
+      <seqpnt visitcount="0" line="24" column="9" endline="24" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="25" column="13" endline="25" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+      <seqpnt visitcount="0" line="26" column="9" endline="26" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\Connection\ConnectionString.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.Repository.ExcelRepository">
+      <seqpnt visitcount="0" line="18" column="9" endline="18" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="38" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="GetWorkSheetNames" class="ExcelMapper.Repository.ExcelRepository" />
+    <method name="GetClassProperties" class="ExcelMapper.Repository.ExcelRepository">
+      <seqpnt visitcount="0" line="39" column="9" endline="39" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="40" column="13" endline="40" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="41" column="13" endline="41" endcolumn="78" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="43" column="20" endline="43" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="44" column="13" endline="44" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="45" column="24" endline="45" endcolumn="73" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="46" column="17" endline="46" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="47" column="21" endline="47" endcolumn="91" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="48" column="28" endline="48" endcolumn="76" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="49" column="21" endline="49" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="50" column="25" endline="50" endcolumn="43" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="51" column="25" endline="51" endcolumn="26" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="52" column="34" endline="52" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="53" column="29" endline="53" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="54" column="33" endline="54" endcolumn="81" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="55" column="33" endline="55" endcolumn="101" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="56" column="29" endline="56" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="52" column="68" endline="52" endcolumn="71" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="52" column="45" endline="52" endcolumn="66" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="57" column="25" endline="57" endcolumn="26" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="58" column="21" endline="58" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="59" column="17" endline="59" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="60" column="13" endline="60" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="61" column="13" endline="61" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="62" column="9" endline="62" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="Get" class="ExcelMapper.Repository.ExcelRepository" />
+    <method name="GetValue" class="ExcelMapper.Extension.Extension">
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="9" column="13" endline="9" endcolumn="43" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="10" column="13" endline="10" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="11" column="17" endline="11" endcolumn="52" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="13" column="13" endline="13" endcolumn="31" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+      <seqpnt visitcount="0" line="14" column="9" endline="14" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Extension\Extension.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.Service.AssemblyGenerator">
+      <seqpnt visitcount="0" line="18" column="9" endline="18" endcolumn="57" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="38" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+    </method>
+    <method name="Compile" class="ExcelMapper.Service.AssemblyGenerator">
+      <seqpnt visitcount="0" line="24" column="9" endline="24" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="25" column="13" endline="28" endcolumn="20" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="30" column="13" endline="33" endcolumn="19" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="38" column="13" endline="38" endcolumn="151" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="40" column="13" endline="40" endcolumn="66" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="42" column="13" endline="42" endcolumn="54" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="43" column="9" endline="43" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+    </method>
+    <method name="GenerateErrorReport" class="ExcelMapper.Service.AssemblyGenerator">
+      <seqpnt visitcount="0" line="46" column="9" endline="46" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="47" column="13" endline="47" endcolumn="45" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="48" column="13" endline="48" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="49" column="17" endline="49" endcolumn="24" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="51" column="13" endline="51" endcolumn="76" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="52" column="13" endline="52" endcolumn="20" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="52" column="45" endline="52" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="52" column="22" endline="52" endcolumn="41" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="53" column="13" endline="53" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="54" column="17" endline="54" endcolumn="99" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="55" column="13" endline="55" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="52" column="42" endline="52" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="56" column="13" endline="56" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="57" column="9" endline="57" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+    </method>
+    <method name="&lt;Compile&gt;b__2" class="ExcelMapper.Service.AssemblyGenerator">
+      <seqpnt visitcount="0" line="38" column="128" endline="38" endcolumn="138" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\AssemblyGenerator.cs" />
+    </method>
+    <method name=".ctor" class="ExcelMapper.Service.ClassFileGenerator">
+      <seqpnt visitcount="0" line="13" column="9" endline="13" endcolumn="58" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="14" column="9" endline="14" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="15" column="13" endline="15" endcolumn="38" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+    </method>
+    <method name="Create" class="ExcelMapper.Service.ClassFileGenerator">
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="103" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="21" column="13" endline="21" endcolumn="94" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="22" column="13" endline="22" endcolumn="40" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="23" column="13" endline="23" endcolumn="95" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="24" column="13" endline="24" endcolumn="43" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="25" column="18" endline="25" endcolumn="28" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="27" column="17" endline="27" endcolumn="167" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="28" column="13" endline="28" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="25" column="65" endline="25" endcolumn="68" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="25" column="29" endline="25" endcolumn="63" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="29" column="13" endline="29" endcolumn="42" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="30" column="13" endline="30" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="31" column="13" endline="31" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="32" column="9" endline="32" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+    </method>
+    <method name="GetClassFile" class="ExcelMapper.Service.ClassFileGenerator">
+      <seqpnt visitcount="0" line="35" column="9" endline="35" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="36" column="13" endline="36" endcolumn="55" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+      <seqpnt visitcount="0" line="37" column="9" endline="37" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassFileGenerator.cs" />
+    </method>
+    <method name="Create" class="ExcelMapper.Service.ClassGenerator">
+      <seqpnt visitcount="0" line="8" column="9" endline="8" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassGenerator.cs" />
+      <seqpnt visitcount="0" line="9" column="13" endline="9" endcolumn="25" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassGenerator.cs" />
+      <seqpnt visitcount="0" line="10" column="9" endline="10" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\ClassGenerator.cs" />
+    </method>
+    <method name="GetFiles" class="ExcelMapper.Service.FileService.FileSystemService" />
+    <method name="GetFilePath" class="ExcelMapper.Service.FileService.FileSystemService">
+      <seqpnt visitcount="0" line="25" column="9" endline="25" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="99" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="27" column="9" endline="27" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+    </method>
+    <method name="Delete" class="ExcelMapper.Service.FileService.FileSystemService">
+      <seqpnt visitcount="0" line="30" column="9" endline="30" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="31" column="13" endline="31" endcolumn="35" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="32" column="13" endline="32" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="33" column="17" endline="33" endcolumn="35" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="34" column="13" endline="34" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="35" column="9" endline="35" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+    </method>
+    <method name="Create" class="ExcelMapper.Service.FileService.FileWriter">
+      <seqpnt visitcount="0" line="12" column="9" endline="12" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="13" column="13" endline="13" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="14" column="13" endline="14" endcolumn="74" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="15" column="13" endline="15" endcolumn="59" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="16" column="9" endline="16" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+    </method>
+    <method name="Write" class="ExcelMapper.Service.FileService.FileWriter">
+      <seqpnt visitcount="0" line="19" column="9" endline="19" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="20" column="13" endline="20" endcolumn="40" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="21" column="9" endline="21" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+    </method>
+    <method name="WriteLine" class="ExcelMapper.Service.FileService.FileWriter">
+      <seqpnt visitcount="0" line="24" column="9" endline="24" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="25" column="13" endline="25" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="26" column="9" endline="26" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+    </method>
+    <method name="Close" class="ExcelMapper.Service.FileService.FileWriter">
+      <seqpnt visitcount="0" line="29" column="9" endline="29" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="30" column="13" endline="30" endcolumn="23" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="31" column="9" endline="31" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+    </method>
+    <method name="Dispose" class="ExcelMapper.Service.FileService.FileWriter">
+      <seqpnt visitcount="0" line="34" column="9" endline="34" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="35" column="13" endline="35" endcolumn="29" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="36" column="13" endline="36" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="37" column="17" endline="37" endcolumn="24" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="39" column="13" endline="39" endcolumn="35" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="40" column="13" endline="40" endcolumn="33" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="41" column="13" endline="41" endcolumn="32" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+      <seqpnt visitcount="0" line="42" column="9" endline="42" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileWriter.cs" />
+    </method>
+    <method name="MoveNext" class="ExcelMapper.Repository.ExcelRepository+&lt;GetWorkSheetNames&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="24" column="9" endline="24" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="25" column="20" endline="25" endcolumn="84" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="26" column="13" endline="26" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="27" column="17" endline="27" endcolumn="102" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="28" column="17" endline="28" endcolumn="41" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="29" column="17" endline="29" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="30" column="26" endline="30" endcolumn="36" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="31" column="21" endline="31" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="32" column="25" endline="32" endcolumn="83" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="33" column="21" endline="33" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="30" column="65" endline="30" endcolumn="68" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="30" column="37" endline="30" endcolumn="63" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="34" column="17" endline="34" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="35" column="13" endline="35" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="36" column="9" endline="36" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="System.IDisposable.Dispose" class="ExcelMapper.Repository.ExcelRepository+&lt;GetWorkSheetNames&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="&lt;&gt;m__Finally4" class="ExcelMapper.Repository.ExcelRepository+&lt;GetWorkSheetNames&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="&lt;Get&gt;b__7" class="ExcelMapper.Repository.ExcelRepository+&lt;&gt;c__DisplayClassb`1">
+      <seqpnt visitcount="0" line="80" column="80" endline="80" endcolumn="112" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="MoveNext" class="ExcelMapper.Repository.ExcelRepository+&lt;Get&gt;d__d`1">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="65" column="9" endline="65" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="66" column="20" endline="66" endcolumn="80" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="67" column="13" endline="67" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="68" column="24" endline="68" endcolumn="73" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="69" column="17" endline="69" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="70" column="21" endline="70" endcolumn="92" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="71" column="28" endline="71" endcolumn="76" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="72" column="21" endline="72" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="73" column="25" endline="73" endcolumn="79" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="76" column="25" endline="76" endcolumn="26" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="77" column="29" endline="77" endcolumn="72" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="78" column="34" endline="78" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="79" column="29" endline="79" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="80" column="33" endline="80" endcolumn="114" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="81" column="33" endline="81" endcolumn="95" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="82" column="29" endline="82" endcolumn="30" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="78" column="68" endline="78" endcolumn="71" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="78" column="45" endline="78" endcolumn="66" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="83" column="29" endline="83" endcolumn="51" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="84" column="25" endline="84" endcolumn="26" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="75" column="25" endline="75" endcolumn="46" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="85" column="21" endline="85" endcolumn="22" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="86" column="17" endline="86" endcolumn="18" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="87" column="13" endline="87" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="88" column="9" endline="88" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="System.IDisposable.Dispose" class="ExcelMapper.Repository.ExcelRepository+&lt;Get&gt;d__d`1">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="&lt;&gt;m__Finally12" class="ExcelMapper.Repository.ExcelRepository+&lt;Get&gt;d__d`1">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="&lt;&gt;m__Finally13" class="ExcelMapper.Repository.ExcelRepository+&lt;Get&gt;d__d`1">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="&lt;&gt;m__Finally14" class="ExcelMapper.Repository.ExcelRepository+&lt;Get&gt;d__d`1">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Repository\ExcelRepository.cs" />
+    </method>
+    <method name="MoveNext" class="ExcelMapper.Service.FileService.FileSystemService+&lt;GetFiles&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="10" column="9" endline="10" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="11" column="13" endline="11" endcolumn="49" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="12" column="13" endline="12" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="13" column="17" endline="13" endcolumn="61" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="14" column="13" endline="14" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16" column="13" endline="16" endcolumn="72" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="17" column="13" endline="17" endcolumn="99" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="18" column="13" endline="18" endcolumn="20" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="18" column="39" endline="18" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="18" column="22" endline="18" endcolumn="35" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="19" column="13" endline="19" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="20" column="17" endline="20" endcolumn="44" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="21" column="13" endline="21" endcolumn="14" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="18" column="36" endline="18" endcolumn="38" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="22" column="9" endline="22" endcolumn="10" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+    </method>
+    <method name="System.IDisposable.Dispose" class="ExcelMapper.Service.FileService.FileSystemService+&lt;GetFiles&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+    </method>
+    <method name="&lt;&gt;m__Finally4" class="ExcelMapper.Service.FileService.FileSystemService+&lt;GetFiles&gt;d__0">
+      <seqpnt visitcount="0" line="16707566" column="0" endline="16707566" endcolumn="0" excluded="false" document="c:\Users\sshetty\Desktop\ExcelMapper\src\ExcelMapper\Service\FileService\FileSystemService.cs" />
+    </method>
+  </module>
+</coverage>

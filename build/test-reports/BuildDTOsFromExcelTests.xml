@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="BuildDTOsFromExcel.Tests.dll" total="10" failures="0" not-run="0" date="2009-05-07" time="14:45:33">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.3074" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\Users\sshetty\Desktop\ExcelMapper\build" machine-name="SHETTY" user="sshetty" user-domain="NOTESVR" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="BuildDTOsFromExcel.Tests.dll" success="True" time="0.273" asserts="0">
+    <results>
+      <test-suite name="BuildDTOsFromExcel" success="True" time="0.271" asserts="0">
+        <results>
+          <test-suite name="Tests" success="True" time="0.271" asserts="0">
+            <results>
+              <test-suite name="ExtensionTests+When_asked_for_an_AssemblyName" success="True" time="0.066" asserts="0">
+                <results>
+                  <test-case name="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_an_AssemblyName.Should_return_the_assembly_name_it_if_it_exists_in_the_array_of_arguments" executed="True" success="True" time="0.059" asserts="1" />
+                  <test-case name="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_an_AssemblyName.Should_return_the_default_assembly_name_it_if_it_exists_in_the_array_of_arguments" executed="True" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite name="ExtensionTests+When_asked_for_files" success="True" time="0.006" asserts="0">
+                <results>
+                  <test-case name="BuildDTOsFromExcel.Tests.ExtensionTests+When_asked_for_files.Should_return_the_file_names_that_are_in_the_array_of_arguments" executed="True" success="True" time="0.006" asserts="2" />
+                </results>
+              </test-suite>
+              <test-suite name="FileParserTests+When_given_a_list_of_files" success="True" time="0.153" asserts="0">
+                <results>
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files.Should_return_the_list_of_files" executed="True" success="True" time="0.153" asserts="3" />
+                </results>
+              </test-suite>
+              <test-suite name="FileParserTests+When_given_a_list_of_files_with_a_searchpattern" success="True" time="0.035" asserts="0">
+                <results>
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_current_directory_for_the_xlsx_searchpattern" executed="True" success="True" time="0.023" asserts="2" />
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_and_return_all_the_xlsx_files_recursively_in_the_given_directory_for_the_xlsx_searchpattern" executed="True" success="True" time="0.004" asserts="2" />
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_current_directory_if_both_xls_and_xlsx_searchpatterns_are_given" executed="True" success="True" time="0.002" asserts="3" />
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_return_all_the_xls_and_xlsx_files_recursively_in_the_given_directory_if_both_xls_and_xlsx_searchpatterns_are_given" executed="True" success="True" time="0.002" asserts="3" />
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_current_directory_for_the_xls_searchpattern" executed="True" success="True" time="0.001" asserts="2" />
+                  <test-case name="BuildDTOsFromExcel.Tests.FileParserTests+When_given_a_list_of_files_with_a_searchpattern.Should_remove_the_searchpattern_return_all_the_xls_files_recursively_in_the_given_directory_for_the_xls_searchpattern" executed="True" success="True" time="0.001" asserts="2" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

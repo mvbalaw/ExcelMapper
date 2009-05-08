@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<project name="XpertDoc" default="build" xmlns="http://nant.sf.net/schemas/nant.xsd">
+
+	<!-- PROPERTIES -->
+	<property name ="current.dir" value="${directory::get-current-directory()}" />
+	<property name="build.dir" value="build" />
+	<property name="nunit-console.exe" value="tools\nunit\bin\nunit-console-x86.exe" />
+	<property name="ncover-console.exe" value="tools\ncover\NCover.Console.exe" />		
+	<property name="excel.dir" value="Excel" />
+	<property name="include.dir" value="Templates\Include" />
+	
+	<!-- User targets -->	
+	<target name="clean" description="Delete Automated Build artifacts">
+		<delete dir="${build.dir}" if="${directory::exists(build.dir)}"/>
+	</target>
+		
+	<target name="compile" depends="clean" description="Builds project">
+		<echo message="Building project using MSBuild in 'Debug' mode"/>
+		<msbuild project="src\ExcelMapper.sln" target="Rebuild" verbosity="quiet">
+			<property name="Configuration" value="debug"/>
+			<property name="Platform" value="x86"/>
+			<property name="SolutionDir" value=".." />
+			<arg value="/nologo"/>
+		</msbuild>
+			
+		<mkdir dir="${build.dir}" />
+		
+		<echo message="Copying artifacts to build directory"/>
+		<copy todir="${build.dir}" overwrite="true">
+		    <fileset basedir="src\ExcelMapper\bin\x86">
+				<include name="*.*" />
+		    </fileset>
+		</copy>
+		<copy todir="${build.dir}" overwrite="true">
+		    <fileset basedir="src\BuildDTOsFromExcel\bin">
+				<include name="*.*" />
+		    </fileset>
+		</copy>
+
+		<copy todir="${build.dir}" overwrite="true">
+			<fileset basedir="src\ExcelMapper.Tests\bin\x86\Debug">
+				<include name="*" />
+				<include name="**\*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dir}" overwrite="true">
+			<fileset basedir="src\BuildDTOsFromExcel.Tests\bin\Debug">
+				<include name="*" />
+				<include name="**\*.*" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="test" depends="run-ExcelMapperTests, run-BuildDTOsFromExcel" />
+	
+	<target name="build" depends="compile, test, generate-coverage-report" description="Clean, Compile, run tests" />
+		
+	<target name="run-ExcelMapperTests">
+		<mkdir dir="${build.dir}\test-reports" />
+		<exec program="${ncover-console.exe}" workingdir="${build.dir}">
+			<arg value="&quot;..\tools\nunit\bin\nunit-console-x86.exe&quot;" />
+			<arg value="&quot;ExcelMapper.Tests.dll /xml:test-reports\ExcelMapperTests.xml /nologo &quot;" />
+			<arg value="//w" />	
+			<arg value="." />
+			<arg value="//x" />
+			<arg value="test-reports\ExcelMapperTestsCoverage.xml" />
+		</exec>
+	</target>
+
+	<target name="run-BuildDTOsFromExcel">
+		<mkdir dir="${build.dir}\test-reports" />
+		<exec program="${ncover-console.exe}" workingdir="${build.dir}">
+			<arg value="&quot;..\tools\nunit\bin\nunit-console-x86.exe&quot;" />			
+			<arg value="&quot;BuildDTOsFromExcel.Tests.dll /xml:test-reports\BuildDTOsFromExcelTests.xml /nologo &quot;" />	
+			<arg value="//w" />	
+			<arg value="." />
+			<arg value="//x" />
+			<arg value="test-reports\BuildDTOsFromExcelTestsCoverage.xml" />
+		</exec>
+	</target>
+	
+	<target name="generate-coverage-report">
+		<!--Generage Coverage Report-->
+		<exec program="tools\NCoverExplorer\NCoverExplorer.Console.exe" workingdir="${build.dir}\test-reports">
+			<arg value="ExcelMapperTestsCoverage.xml" />	
+			<arg value="BuildDTOsFromExcelTestsCoverage.xml" />
+			<arg value="/x" />	
+			<arg value="/r:4" />	
+			<arg value="/P:Coverage" />	
+		</exec>
+	</target>
+</project>
