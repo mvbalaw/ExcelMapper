@@ -4,8 +4,7 @@
 	<!-- PROPERTIES -->
 	<property name ="current.dir" value="${directory::get-current-directory()}" />
 	<property name="build.dir" value="build" />
-	<property name="nunit-console.exe" value="tools\nunit\bin\nunit-console-x86.exe" />
-	<property name="ncover-console.exe" value="tools\ncover\NCover.Console.exe" />		
+	<property name="nunit-console.exe" value="tools\nunit\bin\nunit-console-x86.exe" />	
 	<property name="excel.dir" value="Excel" />
 	<property name="include.dir" value="Templates\Include" />
 	
@@ -53,40 +52,21 @@
 	
 	<target name="test" depends="run-ExcelMapperTests, run-BuildDTOsFromExcel" />
 	
-	<target name="build" depends="compile, test, generate-coverage-report" description="Clean, Compile, run tests" />
+	<target name="build" depends="compile, test" description="Clean, Compile, run tests" />
 		
-	<target name="run-ExcelMapperTests">
-		<mkdir dir="${build.dir}\test-reports" />
-		<exec program="${ncover-console.exe}" workingdir="${build.dir}">
-			<arg value="&quot;..\tools\nunit\bin\nunit-console-x86.exe&quot;" />
-			<arg value="&quot;ExcelMapper.Tests.dll /xml:test-reports\ExcelMapperTests.xml /nologo &quot;" />
-			<arg value="//w" />	
-			<arg value="." />
-			<arg value="//x" />
-			<arg value="test-reports\ExcelMapperTestsCoverage.xml" />
+	<target name="run-ExcelMapperTests">		
+		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
+			<arg value="ExcelMapper.Tests.dll" />
+			<arg value="/xml:ExcelMapperTests.xml" />
+			<arg value="/nologo" />
 		</exec>
 	</target>
 
 	<target name="run-BuildDTOsFromExcel">
-		<mkdir dir="${build.dir}\test-reports" />
-		<exec program="${ncover-console.exe}" workingdir="${build.dir}">
-			<arg value="&quot;..\tools\nunit\bin\nunit-console-x86.exe&quot;" />			
-			<arg value="&quot;BuildDTOsFromExcel.Tests.dll /xml:test-reports\BuildDTOsFromExcelTests.xml /nologo &quot;" />	
-			<arg value="//w" />	
-			<arg value="." />
-			<arg value="//x" />
-			<arg value="test-reports\BuildDTOsFromExcelTestsCoverage.xml" />
-		</exec>
-	</target>
-	
-	<target name="generate-coverage-report">
-		<!--Generage Coverage Report-->
-		<exec program="tools\NCoverExplorer\NCoverExplorer.Console.exe" workingdir="${build.dir}\test-reports">
-			<arg value="ExcelMapperTestsCoverage.xml" />	
-			<arg value="BuildDTOsFromExcelTestsCoverage.xml" />
-			<arg value="/x" />	
-			<arg value="/r:4" />	
-			<arg value="/P:Coverage" />	
+		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
+			<arg value="BuildDTOsFromExcel.Tests.dll" />
+			<arg value="/xml:BuildDTOsFromExcelTests.xml" />
+			<arg value="/nologo" />
 		</exec>
 	</target>
 </project>
