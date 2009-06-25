@@ -20,7 +20,7 @@ namespace ExcelMapper.Service
             _fileWriter = fileWriter;
         }
 
-        public bool Compile(List<ClassProperties> classPropertiesList, AssemblyProperties assemblyProperties, string logFile)
+        public bool Compile(string[] classNames, AssemblyProperties assemblyProperties, string logFile)
         {
             CSharpCodeProvider codeProvider = new CSharpCodeProvider(new Dictionary<string, string>
                 {
@@ -31,11 +31,11 @@ namespace ExcelMapper.Service
                 {
                     OutputAssembly = assemblyProperties.FullName
                 };
-            
-            //assemblyProperties.References.Select(reference => parameters.ReferencedAssemblies.Add(reference));
-            //assemblyProperties.Resources.Select(resource => parameters.EmbeddedResources.Add(resource));
 
-            CompilerResults compilerResults = codeProvider.CompileAssemblyFromFile(parameters, classPropertiesList.Select(x => x.FullName).ToArray());
+            parameters.ReferencedAssemblies.AddRange(assemblyProperties.References.ToArray());
+            parameters.EmbeddedResources.AddRange(assemblyProperties.Resources.ToArray());
+
+            CompilerResults compilerResults = codeProvider.CompileAssemblyFromFile(parameters, classNames);
 
             GenerateErrorReport(compilerResults.Errors, logFile);
 

@@ -21,11 +21,13 @@ namespace ExcelMapper.Tests.Service
             private List<ClassProperties> _classPropertiesList;
             private AssemblyProperties _assemblyProperties;
             private const string LogFile = "TestLog";
+            private string[] _classNames;
 
             [SetUp]
             public void SetUp()
             {
                 const string nameSpace = "Assembly.User";
+
                 _classProperties = new ClassProperties("User")
                     {
                         NameSpace = nameSpace,
@@ -40,7 +42,7 @@ namespace ExcelMapper.Tests.Service
                                 "System.String"
                             }
                     };
-
+                _classNames = new[] { _classProperties.FullName };
                 _classPropertiesList = new List<ClassProperties>
                     {
                         _classProperties
@@ -64,7 +66,7 @@ namespace ExcelMapper.Tests.Service
             public void Should_generate_an_assembly()
             {
                 _classGenerator.Create(_classProperties);
-                Assert.IsTrue(_assemblyGenerator.Compile(_classPropertiesList, _assemblyProperties, LogFile));
+                Assert.IsTrue(_assemblyGenerator.Compile(_classNames, _assemblyProperties, LogFile));
                 Assert.IsTrue(File.Exists(_assemblyProperties.FullName));
             }
 
@@ -74,7 +76,7 @@ namespace ExcelMapper.Tests.Service
                 _classProperties.PropertyType[0] = "Double";
                 _classGenerator.Create(_classProperties);
 
-                Assert.IsFalse(_assemblyGenerator.Compile(_classPropertiesList, _assemblyProperties, LogFile));
+                Assert.IsFalse(_assemblyGenerator.Compile(_classNames, _assemblyProperties, LogFile));
                 Assert.IsTrue(File.Exists(LogFile));
             }
         }

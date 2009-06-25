@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 using ExcelMapper.DTO;
 using ExcelMapper.Repository;
@@ -39,7 +40,7 @@ namespace ExcelMapper
                 }
             }
             return ((classPropertiesList.Count > 0)
-                    && _assemblyGenerator.Compile(classPropertiesList, new AssemblyProperties(assemblyName), DefaultSettings.LogFile));
+                    && _assemblyGenerator.Compile(classPropertiesList.Select(x => x.FullName).ToArray(), new AssemblyProperties(assemblyName), DefaultSettings.LogFile));
         }
     }
 }
