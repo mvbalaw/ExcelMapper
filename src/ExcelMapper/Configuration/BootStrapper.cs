@@ -8,12 +8,7 @@ namespace ExcelMapper.Configuration
 
         public static void Initialize()
         {
-            ObjectFactory.Initialize(x => x.Scan(s =>
-                                                     {
-                                                         s.TheCallingAssembly();
-                                                         s.WithDefaultConventions();
-                                                         s.LookForRegistries();
-                                                     }));
+            ObjectFactory.Initialize(x => x.AddRegistry(new ExcelMapperRegistry()));
         }
 
         public static void Reset()

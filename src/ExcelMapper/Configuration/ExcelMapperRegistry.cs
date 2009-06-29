@@ -13,6 +13,12 @@ namespace ExcelMapper.Configuration
                 .TheDefaultIsConcreteType<ClassFileGenerator>();
             ForRequestedType<IRepository>()
                 .TheDefaultIsConcreteType<ExcelRepository>();
+
+            Scan(s =>
+                     {
+                         s.AssemblyContainingType<ExcelMapperRegistry>();
+                         s.WithDefaultConventions();
+                     });
         }
     }
 }
