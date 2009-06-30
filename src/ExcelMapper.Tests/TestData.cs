@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 
+using ExcelMapper.Extensions;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Tests.DTO;
-
-using ExcelMapper.Extension;
 
 namespace ExcelMapper.Tests
 {

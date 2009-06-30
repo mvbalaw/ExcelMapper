@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 
 using ExcelMapper.DTO;
-using ExcelMapper.Extension;
+using ExcelMapper.Extensions;
 using ExcelMapper.Repository.Connection;
 
 namespace ExcelMapper.Repository

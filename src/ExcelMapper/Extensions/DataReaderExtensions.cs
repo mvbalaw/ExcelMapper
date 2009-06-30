@@ -1,8 +1,8 @@
 using System.Data;
 
-namespace ExcelMapper.Extension
+namespace ExcelMapper.Extensions
 {
-    public static class Extension
+    public static class DataReaderExtensions
     {
         public static T GetValue<T>(this IDataReader reader, int ordinal)
         {

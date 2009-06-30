@@ -1,6 +1,6 @@
 using System.Data;
 
-using ExcelMapper.Extension;
+using ExcelMapper.Extensions;
 
 using NUnit.Framework;
 
@@ -8,7 +8,7 @@ using Rhino.Mocks;
 
 namespace ExcelMapper.Tests.Extensions
 {
-    public class ExtensionTests
+    public class DataReaderExtensionTests
     {
         [TestFixture]
         public class When_asked_to_get_a_value_from_the_datareader
