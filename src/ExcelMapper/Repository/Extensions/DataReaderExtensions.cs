@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace ExcelMapper.Extensions
+namespace ExcelMapper.Repository.Extensions
 {
     public static class DataReaderExtensions
     {

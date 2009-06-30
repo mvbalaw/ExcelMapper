@@ -1,12 +1,12 @@
 using System.Data;
 
-using ExcelMapper.Extensions;
+using ExcelMapper.Repository.Extensions;
 
 using NUnit.Framework;
 
 using Rhino.Mocks;
 
-namespace ExcelMapper.Tests.Extensions
+namespace ExcelMapper.Tests.Repository.Extensions
 {
     public class DataReaderExtensionTests
     {

@@ -84,7 +84,7 @@
     <Compile Include="Repository\Connection\IConnection.cs" />
     <Compile Include="Repository\Connection\IConnectionString.cs" />
     <Compile Include="Repository\ExcelRepository.cs" />
-    <Compile Include="Extensions\DataReaderExtensions.cs" />
+    <Compile Include="Repository\Extensions\DataReaderExtensions.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Service\AssemblyGenerator.cs" />
     <Compile Include="Service\ClassFileGenerator.cs" />
