@@ -1,25 +1,25 @@
-using System;
-using System.Collections.Generic;
+using BuildDTOsFromExcel.FileService;
 
 using ExcelMapper;
-using ExcelMapper.Configuration;
-using ExcelMapper.Service.FileService;
-
-using Microsoft.Practices.ServiceLocation;
 
 namespace BuildDTOsFromExcel
 {
     public class Engine : IEngine
     {
+        private readonly IFileParser _parser;
+        private readonly IExcelToDTOMapper _excelToDTOMapper;
+
+        public Engine(IFileParser parser, IExcelToDTOMapper excelToDTOMapper)
+        {
+            _parser = parser;
+            _excelToDTOMapper = excelToDTOMapper;
+        }
+
         public string Run(string[] args)
         {
-            ExcelMapperServiceLocator.SetUp();
-
-            string assemblyName = args.GetAssemblyName();
-            List<string> files = new FileParser(ServiceLocator.Current.GetInstance<IFileSystemService>()).Parse(args.GetFiles());
-            return ServiceLocator.Current.GetInstance<IExcelToDTOMapper>().Run(assemblyName, files)
-                       ? ("Successfully created the assembly")
-                       : (String.Format("Error in processing. See {0} for details", DefaultSettings.LogFile));
+            return _excelToDTOMapper.Run(args.GetAssemblyName(), _parser.Parse(args.GetFiles()))
+                       ? DefaultSettings.SuccessMessage
+                       : DefaultSettings.ErrorMessage;
         }
     }
 }

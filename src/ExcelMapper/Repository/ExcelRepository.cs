@@ -5,9 +5,10 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Reflection;
 
-using ExcelMapper.DTO;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Repository.Extensions;
+
+using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Repository
 {
@@ -35,10 +36,10 @@ namespace ExcelMapper.Repository
             }
         }
 
-        public ClassProperties GetClassProperties(string file, string workSheet)
+        public ClassAttributes GetClassAttributes(string file, string workSheet)
         {
             string className = workSheet.Replace("$", "");
-            ClassProperties classProperties = new ClassProperties(className);
+            ClassAttributes classAttributes = new ClassAttributes(className);
 
             using (OleDbConnection connection = _connection.GetConnection(file))
             {
@@ -51,14 +52,13 @@ namespace ExcelMapper.Repository
                         {
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
-                                classProperties.Property.Add(reader.GetName(i));
-                                classProperties.PropertyType.Add(reader.GetFieldType(i).ToString());
+                                classAttributes.Properties.Add(new Property(reader.GetFieldType(i).ToString(), reader.GetName(i)));
                             }
                         }
                     }
                 }
             }
-            return classProperties;
+            return classAttributes;
         }
 
         public IEnumerable<T> Get<T>(string file, string workSheet)
@@ -77,7 +77,8 @@ namespace ExcelMapper.Repository
                             T instance = Activator.CreateInstance<T>();
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
-                                PropertyInfo property = properties.Single(p => p.Name.Equals(reader.GetName(i)));
+                                int index = i;
+                                PropertyInfo property = properties.Single(p => p.Name.Equals(reader.GetName(index)));
                                 property.SetValue(instance, reader.GetValue<object>(i), null);
                             }
                             yield return instance;

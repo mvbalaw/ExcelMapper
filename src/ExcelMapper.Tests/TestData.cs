@@ -10,12 +10,11 @@ namespace ExcelMapper.Tests
 {
     public class TestData
     {
-        public static string ExcelDirectory = "Excel";
         public static string UsersXlsx = @"Excel\Users.xlsx";
         public static string UsersXls = @"Excel\Users.xls";
         public static string UsersXlsxConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Excel\\Users.xlsx;Extended Properties=\"Excel 12.0 Xml;HDR=YES;\"";
         public static string UsersXlsConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Excel\\Users.xls;Extended Properties=\"Excel 8.0;HDR=YES;\"";
-
+        public static string AssemblyName = "TestAssembly";
 
         public static IEnumerable<User> GetUsers(string file, string workSheet)
         {

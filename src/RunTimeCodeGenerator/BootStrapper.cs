@@ -1,8 +1,6 @@
-using RunTimeCodeGenerator;
-
 using StructureMap;
 
-namespace ExcelMapper.Configuration
+namespace RunTimeCodeGenerator
 {
     public class BootStrapper
     {
@@ -10,11 +8,7 @@ namespace ExcelMapper.Configuration
 
         public static void Initialize()
         {
-            ObjectFactory.Initialize(x =>
-                                         {
-                                             x.AddRegistry(new ExcelMapperRegistry());
-                                             x.AddRegistry(new RunTimeCodeGeneratorRegistry());
-                                         });
+            ObjectFactory.Initialize(x => x.AddRegistry(new RunTimeCodeGeneratorRegistry()));
         }
 
         public static void Reset()

@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using ExcelMapper;
-
 namespace BuildDTOsFromExcel
 {
     public static class Extensions
     {
-        const string AssemblyPredicate = "/Assembly:";
+        private const string AssemblyPredicate = "/Assembly:";
 
         public static List<string> GetFiles(this string[] args)
         {
@@ -18,7 +16,7 @@ namespace BuildDTOsFromExcel
         public static string GetAssemblyName(this string[] args)
         {
             string assembly = Array.Find(args, arg => arg.Contains(AssemblyPredicate));
-            return !String.IsNullOrEmpty(assembly) ? assembly.Replace(AssemblyPredicate, String.Empty) : DefaultSettings.Assembly;
+            return !String.IsNullOrEmpty(assembly) ? assembly.Replace(AssemblyPredicate, String.Empty) : DefaultSettings.AssemblyName;
         }
     }
 }

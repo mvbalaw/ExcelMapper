@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using ExcelMapper.DTO;
 using ExcelMapper.Repository;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Tests.DTO;
@@ -10,6 +9,8 @@ using ExcelMapper.Tests.DTO;
 using NUnit.Framework;
 
 using Rhino.Mocks;
+
+using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Tests.Repository
 {
@@ -28,7 +29,7 @@ namespace ExcelMapper.Tests.Repository
             public void SetUp()
             {
                 _connectionString = MockRepository.GenerateMock<IConnectionString>();
-                _excelRepository = new ExcelRepository(new global::ExcelMapper.Repository.Connection.Connection(_connectionString));
+                _excelRepository = new ExcelRepository(new ExcelMapper.Repository.Connection.Connection(_connectionString));
 
                 _xlsxFile = TestData.UsersXlsx;
                 _xlsFile = TestData.UsersXls;
@@ -57,11 +58,10 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_return_Class_Properties_object_that_includes_all_the_properties_in_the_class()
             {
-                ClassProperties properties = _excelRepository.GetClassProperties(_xlsxFile, String.Format("{0}$", _workSheetName));
-                Assert.IsNotNull(properties);
-                Assert.AreEqual(_workSheetName, properties.Name);
-                Assert.IsTrue(properties.Property.Count == 4);
-                Assert.IsTrue(properties.PropertyType.Count == 4);
+                ClassAttributes classAttributes = _excelRepository.GetClassAttributes(_xlsxFile, String.Format("{0}$", _workSheetName));
+                Assert.IsNotNull(classAttributes);
+                Assert.AreEqual(_workSheetName, classAttributes.Name);
+                Assert.IsTrue(classAttributes.Properties.Count == 4);
             }
         }
 

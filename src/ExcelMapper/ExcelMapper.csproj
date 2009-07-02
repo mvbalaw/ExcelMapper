@@ -72,9 +72,6 @@
     <Compile Include="Configuration\BootStrapper.cs" />
     <Compile Include="Configuration\ExcelMapperRegistry.cs" />
     <Compile Include="Configuration\StructureMapServiceLocator.cs" />
-    <Compile Include="DefaultSettings.cs" />
-    <Compile Include="DTO\AssemblyProperties.cs" />
-    <Compile Include="DTO\ClassProperties.cs" />
     <Compile Include="Configuration\ExcelMapperServiceLocator.cs" />
     <Compile Include="IExcelToDTOMapper.cs" />
     <Compile Include="ExcelToDTOMapper.cs" />
@@ -86,15 +83,12 @@
     <Compile Include="Repository\ExcelRepository.cs" />
     <Compile Include="Repository\Extensions\DataReaderExtensions.cs" />
     <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Service\AssemblyGenerator.cs" />
-    <Compile Include="Service\ClassFileGenerator.cs" />
-    <Compile Include="Service\ClassGenerator.cs" />
-    <Compile Include="Service\FileService\FileSystemService.cs" />
-    <Compile Include="Service\FileService\FileWriter.cs" />
-    <Compile Include="Service\FileService\IFileSystemService.cs" />
-    <Compile Include="Service\FileService\IFileWriter.cs" />
-    <Compile Include="Service\IAssemblyGenerator.cs" />
-    <Compile Include="Service\IClassGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RunTimeCodeGenerator\RunTimeCodeGenerator.csproj">
+      <Project>{641B6388-773E-48B1-B41C-DBD631512129}</Project>
+      <Name>RunTimeCodeGenerator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

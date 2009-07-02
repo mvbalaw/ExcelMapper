@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 
-using ExcelMapper;
-
 using NUnit.Framework;
 
 namespace BuildDTOsFromExcel.Tests
@@ -24,7 +22,7 @@ namespace BuildDTOsFromExcel.Tests
             {
                 string[] args = new[] { "file1", "file2" };
                 string assemblyName = args.GetAssemblyName();
-                Assert.AreEqual(DefaultSettings.Assembly, assemblyName);
+                Assert.AreEqual(DefaultSettings.AssemblyName, assemblyName);
             }
         }
 

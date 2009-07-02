@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using ExcelMapper.DTO;
 using ExcelMapper.Repository;
-using ExcelMapper.Service;
+
+using RunTimeCodeGenerator.AssemblyGeneration;
+using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper
 {
@@ -22,25 +23,25 @@ namespace ExcelMapper
 
         public bool Run(string assemblyName, List<string> files)
         {
-            List<ClassProperties> classPropertiesList = new List<ClassProperties>();
+            List<ClassAttributes> classAttributesList = new List<ClassAttributes>();
 
             foreach (string file in files)
             {
                 foreach (string workSheet in _excelRepository.GetWorkSheetNames(file))
                 {
-                    ClassProperties classProperties = _excelRepository.GetClassProperties(file, workSheet);
-                    classProperties.NameSpace = assemblyName;
+                    ClassAttributes classAttributes = _excelRepository.GetClassAttributes(file, workSheet);
+                    classAttributes.Namespace = assemblyName;
 
-                    if (classProperties.Property.Count == 0 || classProperties.PropertyType.Count == 0)
+                    if (classAttributes.Properties.Count == 0)
                     {
                         continue;
                     }
-                    _classGenerator.Create(classProperties);
-                    classPropertiesList.Add(classProperties);
+                    _classGenerator.Create(classAttributes);
+                    classAttributesList.Add(classAttributes);
                 }
             }
-            return ((classPropertiesList.Count > 0)
-                    && _assemblyGenerator.Compile(classPropertiesList.Select(x => x.FullName).ToArray(), new AssemblyProperties(assemblyName), DefaultSettings.LogFile));
+            return ((classAttributesList.Count > 0)
+                    && _assemblyGenerator.Compile(classAttributesList.Select(x => x.FullName).ToArray(), new AssemblyAttributes(assemblyName)));
         }
     }
 }

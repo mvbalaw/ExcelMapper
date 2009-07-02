@@ -1,5 +1,4 @@
 using ExcelMapper.Repository;
-using ExcelMapper.Service;
 
 using StructureMap.Configuration.DSL;
 
@@ -9,8 +8,6 @@ namespace ExcelMapper.Configuration
     {
         public ExcelMapperRegistry()
         {
-            ForRequestedType<IClassGenerator>()
-                .TheDefaultIsConcreteType<ClassFileGenerator>();
             ForRequestedType<IRepository>()
                 .TheDefaultIsConcreteType<ExcelRepository>();
 

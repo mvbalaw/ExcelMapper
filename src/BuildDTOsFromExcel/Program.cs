@@ -1,5 +1,12 @@
 ﻿using System;
 
+using BuildDTOsFromExcel.FileService;
+
+using ExcelMapper;
+using ExcelMapper.Configuration;
+
+using Microsoft.Practices.ServiceLocation;
+
 namespace BuildDTOsFromExcel
 {
     public class Program
@@ -18,7 +25,10 @@ namespace BuildDTOsFromExcel
                 return;
             }
 
-            Console.WriteLine(new Engine().Run(args));
+            ExcelMapperServiceLocator.SetUp();
+            IEngine buildDtoFromExcelEngine = new Engine(new FileParser(new FileSystemService()), ServiceLocator.Current.GetInstance<IExcelToDTOMapper>());
+
+            Console.WriteLine(buildDtoFromExcelEngine.Run(args));
         }
 
         private static void DisplayUsage()
@@ -33,5 +43,12 @@ namespace BuildDTOsFromExcel
             Console.WriteLine("Example Usage2: BuildDTOsFromExcel /Assembly:MyAssembly file1.xls file2.xlsx ...");
             Console.WriteLine("Example Usage3: BuildDTOsFromExcel /Assembly:MyAssembly *.xls *.xlsx");
         }
+    }
+
+    public class DefaultSettings
+    {
+        public static string AssemblyName = "ExcelToDTOMapper.DTO";
+        public static string SuccessMessage = "Successfully created the assembly";
+        public static string ErrorMessage = "Error in processing. See log for details";
     }
 }

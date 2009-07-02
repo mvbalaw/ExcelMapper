@@ -1,19 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 using ExcelMapper.Configuration;
-using ExcelMapper.DTO;
 using ExcelMapper.Repository;
-using ExcelMapper.Service;
-using ExcelMapper.Service.FileService;
 
 using Microsoft.Practices.ServiceLocation;
 
 using NUnit.Framework;
 
 using Rhino.Mocks;
+
+using RunTimeCodeGenerator.AssemblyGeneration;
+using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Tests
 {
@@ -29,8 +28,8 @@ namespace ExcelMapper.Tests
 
             private List<string> _excelFiles;
             private List<string> _workSheetNames;
-            private ClassProperties _classProperties1;
-            private ClassProperties _classProperties2;
+            private ClassAttributes _classAttributes1;
+            private ClassAttributes _classAttributes2;
 
             [SetUp]
             public void SetUp()
@@ -49,75 +48,54 @@ namespace ExcelMapper.Tests
                         "Test1$",
                         "Test2$"
                     };
-                _classProperties1 = new ClassProperties("Test1");
-                _classProperties2 = new ClassProperties("Test2");
+                _classAttributes1 = new ClassAttributes("Test1");
+                _classAttributes2 = new ClassAttributes("Test2");
             }
 
             [Test]
             public void Should_create_one_dto_for_each_of_the_worksheet()
             {
                 AddProperties();
-                AddPropertyTypes();
 
                 _excelRepository.Expect(x => x.GetWorkSheetNames("")).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties1);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties2);
+                _excelRepository.Expect(x => x.GetClassAttributes("", "")).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetClassAttributes("", "")).IgnoreArguments().Return(_classAttributes2);
                 _classGenerator.Expect(x => x.Create(null)).IgnoreArguments();
-                _assemblyGenerator.Expect(x => x.Compile(null, null, null)).IgnoreArguments().Return(true);
+                _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(true);
 
-                Assert.IsTrue(_excelToDtoMapper.Run(DefaultSettings.Assembly, _excelFiles));
+                Assert.IsTrue(_excelToDtoMapper.Run(TestData.AssemblyName, _excelFiles));
             }
 
             [Test]
             public void Should_not_create_dto_if_there_are_no_properties()
             {
-                AddPropertyTypes();
                 _excelRepository.Expect(x => x.GetWorkSheetNames("")).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties1);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties2);
-                _classGenerator.Expect(x => x.Create(_classProperties1)).IgnoreArguments();
-                _assemblyGenerator.Expect(x => x.Compile(null, null, null)).IgnoreArguments().Return(true);
+                _excelRepository.Expect(x => x.GetClassAttributes("", "")).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetClassAttributes("", "")).IgnoreArguments().Return(_classAttributes2);
+                _classGenerator.Expect(x => x.Create(_classAttributes1)).IgnoreArguments();
+                _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(true);
 
-                Assert.IsFalse(_excelToDtoMapper.Run(DefaultSettings.Assembly, _excelFiles));
-            }
-
-            [Test]
-            public void Should_not_create_dto_if_there_are_no_propertyTypes()
-            {
-                AddProperties();
-                _excelRepository.Expect(x => x.GetWorkSheetNames("")).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties1);
-                _excelRepository.Expect(x => x.GetClassProperties("", "")).IgnoreArguments().Return(_classProperties2);
-                _classGenerator.Expect(x => x.Create(_classProperties1)).IgnoreArguments();
-                _assemblyGenerator.Expect(x => x.Compile(null, null, null)).IgnoreArguments().Return(true);
-
-                Assert.IsFalse(_excelToDtoMapper.Run(DefaultSettings.Assembly, _excelFiles));
+                Assert.IsFalse(_excelToDtoMapper.Run(TestData.AssemblyName, _excelFiles));
             }
 
             [Test]
             public void Should_not_create_an_assembly_if_the_compile_fails()
             {
                 AddProperties();
-                AddPropertyTypes();
-                _excelRepository.Expect(x => x.GetWorkSheetNames("")).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassProperties("", _workSheetNames[0])).IgnoreArguments().Return(_classProperties1);
-                _excelRepository.Expect(x => x.GetClassProperties("", _workSheetNames[0])).IgnoreArguments().Return(_classProperties2);
-                _classGenerator.Expect(x => x.Create(null)).IgnoreArguments();
-                _assemblyGenerator.Expect(x => x.Compile(null, null, null)).IgnoreArguments().Return(false);
 
-                Assert.IsFalse(_excelToDtoMapper.Run(DefaultSettings.Assembly, _excelFiles));
+                _excelRepository.Expect(x => x.GetWorkSheetNames("")).IgnoreArguments().Return(_workSheetNames);
+                _excelRepository.Expect(x => x.GetClassAttributes("", _workSheetNames[0])).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetClassAttributes("", _workSheetNames[0])).IgnoreArguments().Return(_classAttributes2);
+                _classGenerator.Expect(x => x.Create(null)).IgnoreArguments();
+                _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(false);
+
+                Assert.IsFalse(_excelToDtoMapper.Run(TestData.AssemblyName, _excelFiles));
             }
 
             private void AddProperties()
             {
-                _classProperties1.AddProperty("Id");
-                _classProperties2.AddProperty("Id");
-            }
-
-            private void AddPropertyTypes()
-            {
-                _classProperties1.AddPropertyType("Double");
-                _classProperties2.AddPropertyType("Double");
+                _classAttributes1.AddProperty(new Property("Double", "Id"));
+                _classAttributes2.AddProperty(new Property("Double", "Id"));
             }
         }
 
@@ -126,27 +104,32 @@ namespace ExcelMapper.Tests
         public class SystemTest
         {
             private IExcelToDTOMapper _excelToDtoMapper;
-            private IFileSystemService _fileSystemService;
             private string _assemblyName;
 
             [SetUp]
             public void SetUp()
             {
                 ExcelMapperServiceLocator.SetUp();
-                _fileSystemService = ServiceLocator.Current.GetInstance<IFileSystemService>();
                 _excelToDtoMapper = ServiceLocator.Current.GetInstance<IExcelToDTOMapper>();
-                _assemblyName = String.Format("{0}.dll", DefaultSettings.Assembly);
+                _assemblyName = String.Format("{0}.dll", TestData.AssemblyName);
             }
 
             [TearDown]
             public void TearDown()
             {
-                _fileSystemService.Delete(_assemblyName);
-                _fileSystemService.Delete(DefaultSettings.LogFile);
-                foreach (string file in _fileSystemService.GetFiles("", "*.cs"))
+                File.Delete(_assemblyName);
+
+                FileInfo[] files = GetCurrentDirectoryCSFiles();
+
+                foreach (var file in files)
                 {
-                    _fileSystemService.Delete(file);
+                    File.Delete(file.Name);
                 }
+            }
+
+            private static FileInfo[] GetCurrentDirectoryCSFiles()
+            {
+                return new DirectoryInfo(Directory.GetCurrentDirectory()).GetFiles("*.cs");
             }
 
             [Test]
@@ -156,10 +139,10 @@ namespace ExcelMapper.Tests
                     {
                         TestData.UsersXlsx
                     };
-                Assert.IsTrue(_excelToDtoMapper.Run(DefaultSettings.Assembly, excelFiles));
+                Assert.IsTrue(_excelToDtoMapper.Run(TestData.AssemblyName, excelFiles));
 
                 Assert.IsTrue(File.Exists(_assemblyName));
-                Assert.IsTrue(_fileSystemService.GetFiles("", "*.cs").ToList().Count() > 0);
+                Assert.IsTrue(GetCurrentDirectoryCSFiles().Length > 0);
             }
         }
     }
