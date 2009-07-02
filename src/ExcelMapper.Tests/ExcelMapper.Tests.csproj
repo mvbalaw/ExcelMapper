@@ -93,7 +93,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="Excel\Users.xls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -26,17 +26,18 @@
 		
 		<echo message="Copying artifacts to build directory"/>
 		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\RunTimeCodeGenerator\bin">
+		    <fileset basedir="src\RunTimeCodeGenerator\bin\Debug">
+				<include name="*.*" />
+
+			</fileset>
+		</copy>
+		<copy todir="${build.dir}" overwrite="true">
+		    <fileset basedir="src\ExcelMapper\bin\x86\Debug">
 				<include name="*.*" />
 		    </fileset>
 		</copy>
 		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\ExcelMapper\bin\x86">
-				<include name="*.*" />
-		    </fileset>
-		</copy>
-		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\BuildDTOsFromExcel\bin">
+		    <fileset basedir="src\BuildDTOsFromExcel\bin\Debug">
 				<include name="*.*" />
 		    </fileset>
 		</copy>
@@ -56,7 +57,7 @@
 		<copy todir="${build.dir}" overwrite="true">
 			<fileset basedir="src\BuildDTOsFromExcel.Tests\bin\Debug">
 				<include name="*" />
-				<include name="**\*.*" />
+				<include name="**\*.*" />							
 			</fileset>
 		</copy>
 	</target>

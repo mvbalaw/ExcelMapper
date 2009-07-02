@@ -83,7 +83,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="TestDirectory\Users.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

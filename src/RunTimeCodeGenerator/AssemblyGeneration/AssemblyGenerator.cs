@@ -1,5 +1,6 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 
 using log4net;
 using log4net.Config;
@@ -14,7 +15,7 @@ namespace RunTimeCodeGenerator.AssemblyGeneration
 
         public AssemblyGenerator()
         {
-            XmlConfigurator.Configure();
+            XmlConfigurator.Configure(new FileInfo("log4net.xml"));
         }
 
         public bool Compile(string[] classNames, AssemblyAttributes assemblyAttributes)
