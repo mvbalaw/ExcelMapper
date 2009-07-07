@@ -1,3 +1,7 @@
+using System;
+using System.IO;
+using System.Reflection;
+
 using BuildDTOsFromExcel.FileService;
 
 using ExcelMapper;
@@ -26,9 +30,19 @@ namespace BuildDTOsFromExcel.Tests
             [Test]
             public void Should_create_class_files_for_each_tab_and_write_a_success_message_if_excelmapper_run_is_success()
             {
-                string[] args = new[] { "TestDirectory\\Users.xlsx" };
+                string[] args = new[] { "TestDirectory\\Users.xlsx", "TestDirectory\\Roles.xlsx" };
 
                 Assert.AreEqual(DefaultSettings.SuccessMessage, _engine.Run(args));
+            }
+
+            [Test]
+            public void Should_create_classes_for_each_of_the_tabs_in_the_assembly()
+            {
+                Assembly assembly = Assembly.LoadFile(Path.GetFullPath("ExcelToDTOMapper.DTO.dll"));
+                Type[] types = assembly.GetTypes();
+                Assert.IsTrue(types.Length == 2);
+                Assert.AreEqual("User", types[0].Name);
+                Assert.AreEqual("Role", types[1].Name);
             }
 
             [Test]

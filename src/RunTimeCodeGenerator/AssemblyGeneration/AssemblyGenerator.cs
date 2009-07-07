@@ -15,7 +15,7 @@ namespace RunTimeCodeGenerator.AssemblyGeneration
 
         public AssemblyGenerator()
         {
-            XmlConfigurator.Configure(new FileInfo("log4net.xml"));
+            XmlConfigurator.Configure(new FileInfo(DefaultSettings.LogFile));
         }
 
         public bool Compile(string[] classNames, AssemblyAttributes assemblyAttributes)

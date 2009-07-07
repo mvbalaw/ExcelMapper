@@ -68,11 +68,12 @@
     <Compile Include="ClassGeneration\IClassGenerator.cs" />
     <Compile Include="ClassGeneration\Method.cs" />
     <Compile Include="ClassGeneration\Property.cs" />
+    <Compile Include="DefaultSettings.cs" />
     <Compile Include="RunTimeCodeGeneratorRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="log4net.xml">
+    <Content Include="RunTimCodeGeneratorLogging.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

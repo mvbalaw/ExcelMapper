@@ -83,6 +83,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="TestDirectory\Roles.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestDirectory\Users.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
