@@ -13,11 +13,6 @@ namespace RunTimeCodeGenerator.AssemblyGeneration
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(AssemblyGenerator));
 
-        public AssemblyGenerator()
-        {
-            XmlConfigurator.Configure(new FileInfo(DefaultSettings.LogFile));
-        }
-
         public bool Compile(string[] classNames, AssemblyAttributes assemblyAttributes)
         {
             CSharpCodeProvider codeProvider = new CSharpCodeProvider(new Dictionary<string, string>
@@ -42,6 +37,8 @@ namespace RunTimeCodeGenerator.AssemblyGeneration
 
         private static void GenerateErrorReport(CompilerErrorCollection errorsCollection)
         {
+            XmlConfigurator.Configure(new FileInfo(DefaultSettings.LogFile));
+
             if (errorsCollection.Count == 0)
             {
                 return;
