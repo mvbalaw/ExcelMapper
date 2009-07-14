@@ -37,7 +37,7 @@ namespace RunTimeCodeGenerator.Tests.ClassGeneration
             {
                 _classGenerator.Create(_classAttributes);
 
-                string fileName = String.Format("{0}.cs", _classAttributes.Name);
+                string fileName = _classAttributes.FullName;
                 Assert.IsTrue(File.Exists(fileName));
                 Assert.IsTrue(new FileComparer().Compare(fileName, TestData.ClassWithProperties));
             }
@@ -80,7 +80,7 @@ namespace RunTimeCodeGenerator.Tests.ClassGeneration
             {
                 _classGenerator.Create(_classAttributes);
 
-                string fileName = String.Format("{0}.cs", _classAttributes.Name);
+                string fileName = _classAttributes.FullName;
                 Assert.IsTrue(File.Exists(fileName));
                 Assert.IsTrue(new FileComparer().Compare(fileName, TestData.ClassWithMethods));
             }

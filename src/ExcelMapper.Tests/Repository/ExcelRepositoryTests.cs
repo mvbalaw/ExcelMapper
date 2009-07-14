@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using ExcelMapper.Configuration;
 using ExcelMapper.Repository;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Tests.DTO;
@@ -20,6 +21,7 @@ namespace ExcelMapper.Tests.Repository
         {
             private IConnectionString _connectionString;
             protected IRepository _excelRepository;
+            protected IFileConfiguration _fileConfiguration;
 
             protected string _xlsxFile;
             protected string _xlsFile;
@@ -29,7 +31,8 @@ namespace ExcelMapper.Tests.Repository
             public void SetUp()
             {
                 _connectionString = MockRepository.GenerateMock<IConnectionString>();
-                _excelRepository = new ExcelRepository(new ExcelMapper.Repository.Connection.Connection(_connectionString));
+                _fileConfiguration = MockRepository.GenerateMock<IFileConfiguration>();
+                _excelRepository = new ExcelRepository(new ConnectionBuilder(_connectionString), _fileConfiguration);
 
                 _xlsxFile = TestData.UsersXlsx;
                 _xlsFile = TestData.UsersXls;
@@ -46,7 +49,8 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_give_the_list_of_WorkSheets_in_the_excel()
             {
-                List<string> workSheets = _excelRepository.GetWorkSheetNames(_xlsxFile).ToList();
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
+                List<string> workSheets = _excelRepository.GetWorkSheetNames().ToList();
                 Assert.IsTrue(workSheets.Count == 3);
                 Assert.IsTrue(workSheets.Exists(x => x.Equals(String.Format("{0}$", _workSheetName))));
             }
@@ -58,7 +62,8 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_return_Class_Properties_object_that_includes_all_the_properties_in_the_class()
             {
-                ClassAttributes classAttributes = _excelRepository.GetClassAttributes(_xlsxFile, String.Format("{0}$", _workSheetName));
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
+                ClassAttributes classAttributes = _excelRepository.GetClassAttributes(String.Format("{0}$", _workSheetName));
                 Assert.IsNotNull(classAttributes);
                 Assert.AreEqual(_workSheetName, classAttributes.Name);
                 Assert.IsTrue(classAttributes.Properties.Count == 4);
@@ -71,8 +76,9 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_map_the_excel_columns_to_the_given_dto_object()
             {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
                 User expectedUser = TestData.GetUsers(_xlsxFile, _workSheetName).FirstOrDefault();
-                User actualUser = _excelRepository.Get<User>(_xlsxFile, _workSheetName).FirstOrDefault();
+                User actualUser = _excelRepository.Get<User>(_workSheetName).FirstOrDefault();
 
                 Assert.IsNotNull(actualUser);
 
@@ -85,8 +91,9 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_return_dto_objects_for_each_row_in_the_Xlsx_worksheet()
             {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
                 List<User> expectedCourts = TestData.GetUsers(_xlsxFile, _workSheetName).ToList();
-                List<User> actualCourts = _excelRepository.Get<User>(_xlsxFile, _workSheetName).ToList();
+                List<User> actualCourts = _excelRepository.Get<User>(_workSheetName).ToList();
                 Assert.IsNotNull(actualCourts);
                 Assert.AreEqual(expectedCourts.Count, actualCourts.Count);
             }
@@ -94,8 +101,9 @@ namespace ExcelMapper.Tests.Repository
             [Test]
             public void Should_return_dto_objects_for_each_row_in_the_Xls_worksheet()
             {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsFile);
                 List<User> expectedSuits = TestData.GetUsers(_xlsFile, _workSheetName).ToList();
-                List<User> actualSuits = _excelRepository.Get<User>(_xlsFile, _workSheetName).ToList();
+                List<User> actualSuits = _excelRepository.Get<User>(_workSheetName).ToList();
                 Assert.IsNotNull(actualSuits);
                 Assert.AreEqual(expectedSuits.Count, actualSuits.Count);
             }

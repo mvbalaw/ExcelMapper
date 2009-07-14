@@ -1,18 +1,14 @@
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
-
-using log4net;
-using log4net.Config;
 
 using Microsoft.CSharp;
+
+using RunTimeCodeGenerator.Logging;
 
 namespace RunTimeCodeGenerator.AssemblyGeneration
 {
     public class AssemblyGenerator : IAssemblyGenerator
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(AssemblyGenerator));
-
         public bool Compile(string[] classNames, AssemblyAttributes assemblyAttributes)
         {
             CSharpCodeProvider codeProvider = new CSharpCodeProvider(new Dictionary<string, string>
@@ -37,15 +33,14 @@ namespace RunTimeCodeGenerator.AssemblyGeneration
 
         private static void GenerateErrorReport(CompilerErrorCollection errorsCollection)
         {
-            XmlConfigurator.Configure(new FileInfo(DefaultSettings.LogFile));
-
             if (errorsCollection.Count == 0)
             {
                 return;
             }
+
             foreach (CompilerError error in errorsCollection)
             {
-                Log.ErrorFormat("{0}: {1}", error.FileName, error.ErrorText);
+                Log.For(typeof(AssemblyGenerator)).LogError("{0}: {1}", error.FileName, error.ErrorText);
             }
         }
     }

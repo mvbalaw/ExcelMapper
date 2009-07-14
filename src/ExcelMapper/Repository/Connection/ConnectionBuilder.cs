@@ -2,11 +2,11 @@ using System.Data.OleDb;
 
 namespace ExcelMapper.Repository.Connection
 {
-    public class Connection : IConnection
+    public class ConnectionBuilder : IConnectionBuilder
     {
         private readonly IConnectionString _connectionString;
 
-        public Connection(IConnectionString connectionString)
+        public ConnectionBuilder(IConnectionString connectionString)
         {
             _connectionString = connectionString;
         }

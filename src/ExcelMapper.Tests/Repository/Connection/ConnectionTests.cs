@@ -16,14 +16,14 @@ namespace ExcelMapper.Tests.Repository.Connection
         {
             private string _file;
             private IConnectionString _connectionString;
-            private IConnection _connection;
+            private IConnectionBuilder _connectionBuilder;
 
             [SetUp]
             public void SetUp()
             {
                 _file = TestData.UsersXlsx;
                 _connectionString = MockRepository.GenerateMock<IConnectionString>();
-                _connection = new global::ExcelMapper.Repository.Connection.Connection(_connectionString);
+                _connectionBuilder = new global::ExcelMapper.Repository.Connection.ConnectionBuilder(_connectionString);
             }
 
             [Test]
@@ -31,7 +31,7 @@ namespace ExcelMapper.Tests.Repository.Connection
             {
                 _connectionString.Expect(x => x.Get(_file)).Return(TestData.UsersXlsConnectionString);
 
-                using (OleDbConnection connection = _connection.GetConnection(_file))
+                using (OleDbConnection connection = _connectionBuilder.GetConnection(_file))
                 {
                     Assert.IsInstanceOfType(typeof(OleDbConnection), connection);
                     Assert.AreEqual(ConnectionState.Open, connection.State);

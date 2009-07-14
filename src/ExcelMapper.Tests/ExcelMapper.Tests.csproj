@@ -93,12 +93,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Excel\Users.xls">
+    <None Include="Excel\UsersXls.xls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Excel\Users.xlsx">
+    <None Include="Excel\UsersXlsx.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RunTimCodeGeneratorLoggingConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

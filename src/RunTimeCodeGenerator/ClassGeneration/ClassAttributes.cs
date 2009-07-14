@@ -14,7 +14,7 @@ namespace RunTimeCodeGenerator.ClassGeneration
         public string Name { get; set; }
         public string FullName
         {
-            get { return String.Format("{0}.cs", Name); }
+            get { return String.Format("{0}.{1}.cs", Namespace, Name); }
         }
 
         public List<string> UsingNamespaces = new List<string>();

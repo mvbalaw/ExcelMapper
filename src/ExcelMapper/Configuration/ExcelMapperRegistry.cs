@@ -10,7 +10,9 @@ namespace ExcelMapper.Configuration
         {
             ForRequestedType<IRepository>()
                 .TheDefaultIsConcreteType<ExcelRepository>();
-
+            ForRequestedType<IFileConfiguration>()
+                .AsSingletons()
+                .TheDefaultIsConcreteType<FileConfiguration>();
             Scan(s =>
                      {
                          s.AssemblyContainingType<ExcelMapperRegistry>();

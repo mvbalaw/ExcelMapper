@@ -22,15 +22,14 @@ namespace RunTimeCodeGenerator.Tests.AssemblyGeneration
             [TestFixtureSetUp]
             public void TestFixtureSetUp()
             {
-                if (Directory.Exists(TestData.LogDirectory))
-                {
-                    Directory.Delete(TestData.LogDirectory, true);
-                }
+                File.Delete(TestData.LogFile);
             }
 
             [SetUp]
             public void SetUp()
             {
+                BootStrapper.Reset();
+
                 const string nameSpace = "Assembly.User";
 
                 _classAttributes = new ClassAttributes("User")

@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Reflection;
 
+using ExcelMapper.Configuration;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Repository.Extensions;
 
@@ -14,16 +15,18 @@ namespace ExcelMapper.Repository
 {
     public class ExcelRepository : IRepository
     {
-        private readonly IConnection _connection;
+        private readonly IConnectionBuilder _connectionBuilder;
+        private readonly IFileConfiguration _fileConfiguration;
 
-        public ExcelRepository(IConnection connection)
+        public ExcelRepository(IConnectionBuilder connectionBuilder, IFileConfiguration fileConfiguration)
         {
-            _connection = connection;
+            _connectionBuilder = connectionBuilder;
+            _fileConfiguration = fileConfiguration;
         }
 
-        public IEnumerable<string> GetWorkSheetNames(string fileName)
+        public IEnumerable<string> GetWorkSheetNames()
         {
-            using (OleDbConnection connection = _connection.GetConnection(fileName))
+            using (OleDbConnection connection = _connectionBuilder.GetConnection(_fileConfiguration.FileName))
             {
                 DataTable schemaTable = connection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
                 if (schemaTable != null)
@@ -36,12 +39,12 @@ namespace ExcelMapper.Repository
             }
         }
 
-        public ClassAttributes GetClassAttributes(string file, string workSheet)
+        public ClassAttributes GetClassAttributes(string workSheet)
         {
             string className = workSheet.Replace("$", "");
             ClassAttributes classAttributes = new ClassAttributes(className);
 
-            using (OleDbConnection connection = _connection.GetConnection(file))
+            using (OleDbConnection connection = _connectionBuilder.GetConnection(_fileConfiguration.FileName))
             {
                 using (OleDbCommand command = connection.CreateCommand())
                 {
@@ -61,9 +64,9 @@ namespace ExcelMapper.Repository
             return classAttributes;
         }
 
-        public IEnumerable<T> Get<T>(string file, string workSheet)
+        public IEnumerable<T> Get<T>(string workSheet)
         {
-            using (OleDbConnection connection = _connection.GetConnection(file))
+            using (OleDbConnection connection = _connectionBuilder.GetConnection(_fileConfiguration.FileName))
             {
                 using (OleDbCommand command = connection.CreateCommand())
                 {
