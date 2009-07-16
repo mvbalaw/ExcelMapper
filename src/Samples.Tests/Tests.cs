@@ -3,12 +3,15 @@ using ExcelMapper.Configuration;
 using ExcelMapper.Repository;
 using ExcelToDTOMapper.DTO.Users;
 using Microsoft.Practices.ServiceLocation;
+using NUnit.Framework;
 
-namespace SampleApplicationUsingExcelMapper
+namespace Samples.Tests
 {
-    public class Program
+    [TestFixture]
+    public class Tests
     {
-        public static void Main()
+        [Test]
+        public void Test()
         {
             ExcelMapperServiceLocator.SetUp();
             ServiceLocator.Current.GetInstance<IFileConfiguration>().FileName = "Excel\\Users.xlsx";

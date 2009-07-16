@@ -7,6 +7,9 @@
 	<property name="nunit-console.exe" value="tools\nunit\bin\nunit-console-x86.exe" />	
 	<property name="excel.dir" value="Excel" />
 	<property name="include.dir" value="Templates\Include" />
+	<property name="lib.dir" value="lib" />
+	<property name="BuildDTOsFromExcel.exe" value="BuildDTOsFromExcel.exe" />
+	<property name="Excel.dir" value="src\Samples.Tests\Excel" />
 	
 	<!-- User targets -->	
 	<target name="clean" description="Delete Automated Build artifacts">
@@ -55,12 +58,18 @@
 				<include name="*" />
 				<include name="**\*.*" />							
 			</fileset>
+		</copy>	
+		<copy todir="${build.dir}" overwrite="true">
+			<fileset basedir="src\Samples.Tests\bin\Debug">
+				<include name="*" />
+				<include name="**\*.*" />							
+			</fileset>
 		</copy>			
 	</target>	
 	
 	<target name="test" depends="RunTimeCodeGeneratorTests, ExcelMapperTests, BuildDTOsFromExcel" />
 	
-	<target name="build" depends="compile, test" description="Clean, Compile, run tests" />
+	<target name="build" depends="compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
 		
 	<target name="RunTimeCodeGeneratorTests">		
 		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
@@ -84,5 +93,17 @@
 			<arg value="/xml:BuildDTOsFromExcelTests.xml" />
 			<arg value="/nologo" />
 		</exec>
+	</target>
+	
+	<target name="updateSampleExcel" description="Update lib folder">
+		<exec program="${build.dir}\${BuildDTOsFromExcel.exe}" workingdir="${build.dir}">
+			<arg value="..\${Excel.dir}\*.xls" />
+			<arg value="..\${Excel.dir}\*.xlsx" />
+		</exec>
+		<copy todir="${lib.dir}" overwrite="true">
+			<fileset basedir="${build.dir}">
+				<include name="ExcelToDTOMapper.DTO.dll" />
+			</fileset>
+		</copy>	
 	</target>
 </project>
