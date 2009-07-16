@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<project name="XpertDoc" default="build" xmlns="http://nant.sf.net/schemas/nant.xsd">
+<project name="ExcelMapper" default="build" xmlns="http://nant.sf.net/schemas/nant.xsd">
 
 	<!-- PROPERTIES -->
 	<property name ="current.dir" value="${directory::get-current-directory()}" />
@@ -11,28 +11,24 @@
 	<!-- User targets -->	
 	<target name="clean" description="Delete Automated Build artifacts">
 		<delete dir="${build.dir}" if="${directory::exists(build.dir)}"/>
+		<mkdir dir="${build.dir}" />
 	</target>
-		
+
 	<target name="compile" depends="clean" description="Builds project">
-		<echo message="Building project using MSBuild in 'Debug' mode"/>
 		<msbuild project="src\ExcelMapper.sln" target="Rebuild" verbosity="quiet">
 			<property name="Configuration" value="debug"/>
-			<property name="Platform" value="x86"/>
 			<property name="SolutionDir" value=".." />
 			<arg value="/nologo"/>
 		</msbuild>
-			
-		<mkdir dir="${build.dir}" />
-		
+						  
 		<echo message="Copying artifacts to build directory"/>
 		<copy todir="${build.dir}" overwrite="true">
 		    <fileset basedir="src\RunTimeCodeGenerator\bin\Debug">
 				<include name="*.*" />
-
 			</fileset>
 		</copy>
 		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\ExcelMapper\bin\x86\Debug">
+		    <fileset basedir="src\ExcelMapper\bin\Debug">
 				<include name="*.*" />
 		    </fileset>
 		</copy>
@@ -49,7 +45,7 @@
 			</fileset>
 		</copy>
 		<copy todir="${build.dir}" overwrite="true">
-			<fileset basedir="src\ExcelMapper.Tests\bin\x86\Debug">
+			<fileset basedir="src\ExcelMapper.Tests\bin\Debug">
 				<include name="*" />
 				<include name="**\*.*" />
 			</fileset>
@@ -59,8 +55,8 @@
 				<include name="*" />
 				<include name="**\*.*" />							
 			</fileset>
-		</copy>
-	</target>
+		</copy>			
+	</target>	
 	
 	<target name="test" depends="RunTimeCodeGeneratorTests, ExcelMapperTests, BuildDTOsFromExcel" />
 	
