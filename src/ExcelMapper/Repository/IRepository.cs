@@ -7,7 +7,8 @@ namespace ExcelMapper.Repository
     public interface IRepository
     {
         IEnumerable<string> GetWorkSheetNames();
-        ClassAttributes GetClassAttributes(string workSheet);
+        ClassAttributes GetDTOClassAttributes(string workSheet);
         IEnumerable<T> Get<T>(string workSheet);
+        void Put<T>(IEnumerable<T> values);
     }
 }

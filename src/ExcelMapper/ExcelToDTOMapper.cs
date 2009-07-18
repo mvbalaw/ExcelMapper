@@ -35,7 +35,7 @@ namespace ExcelMapper
                 _fileConfiguration.FileName = file;
                 foreach (string workSheet in _excelRepository.GetWorkSheetNames())
                 {
-                    ClassAttributes classAttributes = _excelRepository.GetClassAttributes(workSheet);
+                    ClassAttributes classAttributes = _excelRepository.GetDTOClassAttributes(workSheet);
                     classAttributes.Namespace = String.Format("{0}.{1}", assemblyName, Path.GetFileNameWithoutExtension(file));
 
                     if (classAttributes.Properties.Count == 0)

@@ -61,8 +61,8 @@ namespace ExcelMapper.Tests
                 AddProperties();
 
                 _excelRepository.Expect(x => x.GetWorkSheetNames()).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassAttributes("")).IgnoreArguments().Return(_classAttributes1);
-                _excelRepository.Expect(x => x.GetClassAttributes("")).IgnoreArguments().Return(_classAttributes2);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes("")).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes("")).IgnoreArguments().Return(_classAttributes2);
                 _classGenerator.Expect(x => x.Create(null)).IgnoreArguments();
                 _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(true);
 
@@ -73,8 +73,8 @@ namespace ExcelMapper.Tests
             public void Should_not_create_dto_if_there_are_no_properties()
             {
                 _excelRepository.Expect(x => x.GetWorkSheetNames()).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassAttributes("")).IgnoreArguments().Return(_classAttributes1);
-                _excelRepository.Expect(x => x.GetClassAttributes("")).IgnoreArguments().Return(_classAttributes2);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes("")).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes("")).IgnoreArguments().Return(_classAttributes2);
                 _classGenerator.Expect(x => x.Create(_classAttributes1)).IgnoreArguments();
                 _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(true);
 
@@ -87,8 +87,8 @@ namespace ExcelMapper.Tests
                 AddProperties();
 
                 _excelRepository.Expect(x => x.GetWorkSheetNames()).IgnoreArguments().Return(_workSheetNames);
-                _excelRepository.Expect(x => x.GetClassAttributes(_workSheetNames[0])).IgnoreArguments().Return(_classAttributes1);
-                _excelRepository.Expect(x => x.GetClassAttributes(_workSheetNames[0])).IgnoreArguments().Return(_classAttributes2);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes(_workSheetNames[0])).IgnoreArguments().Return(_classAttributes1);
+                _excelRepository.Expect(x => x.GetDTOClassAttributes(_workSheetNames[0])).IgnoreArguments().Return(_classAttributes2);
                 _classGenerator.Expect(x => x.Create(null)).IgnoreArguments();
                 _assemblyGenerator.Expect(x => x.Compile(null, null)).IgnoreArguments().Return(false);
 
@@ -112,7 +112,7 @@ namespace ExcelMapper.Tests
             [SetUp]
             public void SetUp()
             {
-                ExcelMapperServiceLocator.SetUp();
+                Configuration.ExcelMapper.SetUp();
                 _excelToDtoMapper = ServiceLocator.Current.GetInstance<IExcelToDTOMapper>();
                 _assemblyName = String.Format("{0}.dll", TestData.AssemblyName);
             }

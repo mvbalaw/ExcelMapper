@@ -2,7 +2,7 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace ExcelMapper.Configuration
 {
-    public class ExcelMapperServiceLocator
+    public class ExcelMapper
     {
         public static void SetUp()
         {

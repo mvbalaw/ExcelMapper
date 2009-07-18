@@ -13,7 +13,7 @@ namespace Samples.Tests
         [Test]
         public void Test()
         {
-            ExcelMapperServiceLocator.SetUp();
+            ExcelMapper.Configuration.ExcelMapper.SetUp();
             ServiceLocator.Current.GetInstance<IFileConfiguration>().FileName = "Excel\\Users.xlsx";
 
             IRepository repository = ServiceLocator.Current.GetInstance<IRepository>();

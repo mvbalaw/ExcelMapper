@@ -1,10 +1,6 @@
 ﻿using System;
-
 using BuildDTOsFromExcel.FileService;
-
 using ExcelMapper;
-using ExcelMapper.Configuration;
-
 using Microsoft.Practices.ServiceLocation;
 
 namespace BuildDTOsFromExcel
@@ -25,15 +21,17 @@ namespace BuildDTOsFromExcel
                 return;
             }
 
-            ExcelMapperServiceLocator.SetUp();
-            IEngine buildDtoFromExcelEngine = new Engine(new FileParser(new FileSystemService()), ServiceLocator.Current.GetInstance<IExcelToDTOMapper>());
+            ExcelMapper.Configuration.ExcelMapper.SetUp();
+            IEngine buildDtoFromExcelEngine = new Engine(new FileParser(new FileSystemService()),
+                                                         ServiceLocator.Current.GetInstance<IExcelToDTOMapper>());
 
             Console.WriteLine(buildDtoFromExcelEngine.Run(args));
         }
 
         private static void DisplayUsage()
         {
-            Console.WriteLine("Maps non-empty workSheets in excel files to an assembly containing strongly typed objects");
+            Console.WriteLine(
+                "Maps non-empty workSheets in excel files to an assembly containing strongly typed objects");
             Console.WriteLine();
             Console.WriteLine("BuildDTOsFromExcel   [/Assembly[[:]assemblyName]] [Excel Files]");
             Console.WriteLine("/Assembly            [Optional] Assembly name");

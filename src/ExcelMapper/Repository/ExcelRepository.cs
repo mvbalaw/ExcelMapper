@@ -4,11 +4,10 @@ using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Reflection;
-
+using System.Text;
 using ExcelMapper.Configuration;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Repository.Extensions;
-
 using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Repository
@@ -39,7 +38,7 @@ namespace ExcelMapper.Repository
             }
         }
 
-        public ClassAttributes GetClassAttributes(string workSheet)
+        public ClassAttributes GetDTOClassAttributes(string workSheet)
         {
             string className = workSheet.Replace("$", "");
             ClassAttributes classAttributes = new ClassAttributes(className);
@@ -55,7 +54,8 @@ namespace ExcelMapper.Repository
                         {
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
-                                classAttributes.Properties.Add(new Property(reader.GetFieldType(i).ToString(), reader.GetName(i)));
+                                classAttributes.Properties.Add(new Property(reader.GetFieldType(i).ToString(),
+                                                                            reader.GetName(i)));
                             }
                         }
                     }
@@ -73,7 +73,7 @@ namespace ExcelMapper.Repository
                     command.CommandText = String.Format("SELECT * FROM [{0}$]", workSheet);
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
-                        PropertyInfo[] properties = typeof(T).GetProperties();
+                        PropertyInfo[] properties = typeof (T).GetProperties();
 
                         while (reader.Read())
                         {
@@ -86,6 +86,39 @@ namespace ExcelMapper.Repository
                             }
                             yield return instance;
                         }
+                    }
+                }
+            }
+        }
+
+        private static string ConstructQueryValues(int length)
+        {
+            StringBuilder query = new StringBuilder();
+            for (int i = 0; i < length - 1; i++)
+            {
+                query.Append("?, ");
+            }
+            query.Append("?");
+            return query.ToString();
+        }
+
+        public void Put<T>(IEnumerable<T> values)
+        {
+            PropertyInfo[] properties = typeof (T).GetProperties();
+            string query = String.Format("INSERT INTO [{0}$] VALUES ({1})", typeof (T).Name,
+                                         ConstructQueryValues(properties.Length));
+            using (OleDbConnection connection = _connectionBuilder.GetConnection(_fileConfiguration.FileName))
+            {
+                using (OleDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = query;
+                    foreach (var value in values)
+                    {
+                        foreach (var property in properties)
+                        {
+                            command.Parameters.AddWithValue(property.Name, property.GetValue(value, null));
+                        }
+                        command.ExecuteNonQuery();
                     }
                 }
             }

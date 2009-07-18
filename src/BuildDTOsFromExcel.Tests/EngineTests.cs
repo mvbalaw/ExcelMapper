@@ -23,7 +23,7 @@ namespace BuildDTOsFromExcel.Tests
             [SetUp]
             public void SetUp()
             {
-                ExcelMapperServiceLocator.SetUp();
+                ExcelMapper.Configuration.ExcelMapper.SetUp();
                 _engine = new Engine(new FileParser(new FileSystemService()), ServiceLocator.Current.GetInstance<IExcelToDTOMapper>());
             }
 

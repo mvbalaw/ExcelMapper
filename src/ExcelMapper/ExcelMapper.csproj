@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{CB8A10B6-9E2E-4228-B945-9C375577AF88}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -73,7 +73,7 @@
     <Compile Include="Configuration\ExcelMapperRegistry.cs" />
     <Compile Include="Configuration\FileConfiguration.cs" />
     <Compile Include="Configuration\StructureMapServiceLocator.cs" />
-    <Compile Include="Configuration\ExcelMapperServiceLocator.cs" />
+    <Compile Include="Configuration\ExcelMapper.cs" />
     <Compile Include="IExcelToDTOMapper.cs" />
     <Compile Include="ExcelToDTOMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,16 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using ExcelMapper.Configuration;
 using ExcelMapper.Repository;
 using ExcelMapper.Repository.Connection;
 using ExcelMapper.Tests.DTO;
-
 using NUnit.Framework;
-
 using Rhino.Mocks;
-
 using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Tests.Repository
@@ -63,7 +59,8 @@ namespace ExcelMapper.Tests.Repository
             public void Should_return_Class_Properties_object_that_includes_all_the_properties_in_the_class()
             {
                 _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
-                ClassAttributes classAttributes = _excelRepository.GetClassAttributes(String.Format("{0}$", _workSheetName));
+                ClassAttributes classAttributes =
+                    _excelRepository.GetDTOClassAttributes(String.Format("{0}$", _workSheetName));
                 Assert.IsNotNull(classAttributes);
                 Assert.AreEqual(_workSheetName, classAttributes.Name);
                 Assert.IsTrue(classAttributes.Properties.Count == 4);
@@ -92,20 +89,54 @@ namespace ExcelMapper.Tests.Repository
             public void Should_return_dto_objects_for_each_row_in_the_Xlsx_worksheet()
             {
                 _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
-                List<User> expectedCourts = TestData.GetUsers(_xlsxFile, _workSheetName).ToList();
-                List<User> actualCourts = _excelRepository.Get<User>(_workSheetName).ToList();
-                Assert.IsNotNull(actualCourts);
-                Assert.AreEqual(expectedCourts.Count, actualCourts.Count);
+                List<User> expectedUsers = TestData.GetUsers(_xlsxFile, _workSheetName).ToList();
+                List<User> actualUsers = _excelRepository.Get<User>(_workSheetName).ToList();
+                Assert.IsNotNull(actualUsers);
+                Assert.AreEqual(expectedUsers.Count, actualUsers.Count);
             }
 
             [Test]
             public void Should_return_dto_objects_for_each_row_in_the_Xls_worksheet()
             {
                 _fileConfiguration.Expect(x => x.FileName).Return(_xlsFile);
-                List<User> expectedSuits = TestData.GetUsers(_xlsFile, _workSheetName).ToList();
-                List<User> actualSuits = _excelRepository.Get<User>(_workSheetName).ToList();
-                Assert.IsNotNull(actualSuits);
-                Assert.AreEqual(expectedSuits.Count, actualSuits.Count);
+                List<User> expectedUsers = TestData.GetUsers(_xlsFile, _workSheetName).ToList();
+                List<User> actualUsers = _excelRepository.Get<User>(_workSheetName).ToList();
+                Assert.IsNotNull(actualUsers);
+                Assert.AreEqual(expectedUsers.Count, actualUsers.Count);
+            }
+
+            [Test]
+            public void Should_insert_the_values_provided_in_the_list_of__dto_objects_in_to_the_Xls_worksheet()
+            {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsFile);
+                List<User> users = new List<User>
+                                       {
+                                           new User
+                                               {
+                                                   Id = 5,
+                                                   FirstName = "John",
+                                                   LastName = "Doe",
+                                                   DateOfBirth = Convert.ToDateTime("1/1/2008")
+                                               }
+                                       };
+                _excelRepository.Put(users);
+            }
+
+            [Test]
+            public void Should_insert_the_values_provided_in_the_list_of__dto_objects_in_to_the_Xlsx_worksheet()
+            {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
+                List<User> users = new List<User>
+                                       {
+                                           new User
+                                               {
+                                                   Id = 5,
+                                                   FirstName = "John",
+                                                   LastName = "Doe",
+                                                   DateOfBirth = Convert.ToDateTime("1/1/2008")
+                                               }
+                                       };
+                _excelRepository.Put(users);
             }
         }
     }
