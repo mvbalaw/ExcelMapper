@@ -56,6 +56,9 @@
     <Compile Include="AssemblyGeneration\AssemblyGeneratorTests.cs" />
     <Compile Include="ClassGeneration\ClassFileGeneratorTests.cs" />
     <Compile Include="ClassGeneration\ClassFileWriterTests.cs" />
+    <Compile Include="ClassGeneration\ClassWithMethodsWithParameters.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Logging\FileListenerTests.cs" />
     <Compile Include="Logging\LoggerTests.cs" />
     <Compile Include="Logging\LogTests.cs" />
