@@ -23,7 +23,7 @@ namespace ExcelMapper.Tests.Repository.Connection
             {
                 _file = TestData.UsersXlsx;
                 _connectionString = MockRepository.GenerateMock<IConnectionString>();
-                _connectionBuilder = new global::ExcelMapper.Repository.Connection.ConnectionBuilder(_connectionString);
+                _connectionBuilder = new ConnectionBuilder(_connectionString);
             }
 
             [Test]

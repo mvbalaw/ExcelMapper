@@ -8,6 +8,8 @@ namespace ExcelMapper.Configuration
     {
         public ExcelMapperRegistry()
         {
+			ForRequestedType<IDataProvider>()
+				.TheDefaultIsConcreteType<OleDbDataProvider>();
             ForRequestedType<IRepository>()
                 .TheDefaultIsConcreteType<ExcelRepository>();
             ForRequestedType<IFileConfiguration>()
