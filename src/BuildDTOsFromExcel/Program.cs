@@ -46,7 +46,7 @@ namespace BuildDTOsFromExcel
     public class DefaultSettings
     {
         public static string AssemblyName = "ExcelToDTOMapper.DTO";
-        public static string SuccessMessage = "Successfully created the assembly";
         public static string ErrorMessage = "Error in processing. See log for details";
+        public static string SuccessMessage = "Successfully created the assembly";
     }
 }

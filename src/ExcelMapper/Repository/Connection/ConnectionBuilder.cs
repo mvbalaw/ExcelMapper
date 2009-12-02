@@ -13,7 +13,7 @@ namespace ExcelMapper.Repository.Connection
 
         public OleDbConnection GetConnection(string file)
         {
-            OleDbConnection connection = new OleDbConnection(_connectionString.Get(file));
+            var connection = new OleDbConnection(_connectionString.Get(file));
             connection.Open();
             return connection;
         }

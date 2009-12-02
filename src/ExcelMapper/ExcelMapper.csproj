@@ -85,6 +85,8 @@
     <Compile Include="Repository\ExcelRepository.cs" />
     <Compile Include="Repository\Extensions\DataReaderExtensions.cs" />
     <Compile Include="Repository\FileService.cs" />
+    <Compile Include="Repository\IDataProvider.cs" />
+    <Compile Include="Repository\IFileService.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\OleDbDataProvider.cs" />
     <Compile Include="Repository\StringExtensions.cs" />
