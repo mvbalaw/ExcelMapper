@@ -24,12 +24,6 @@
 			<arg value="/nologo"/>
 		</msbuild>
 						  
-		<echo message="Copying artifacts to build directory"/>
-		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\RunTimeCodeGenerator\bin\Debug">
-				<include name="*.*" />
-			</fileset>
-		</copy>
 		<copy todir="${build.dir}" overwrite="true">
 		    <fileset basedir="src\ExcelMapper\bin\Debug">
 				<include name="*.*" />
@@ -41,12 +35,6 @@
 		    </fileset>
 		</copy>
 
-		<copy todir="${build.dir}" overwrite="true">
-			<fileset basedir="src\RunTimeCodeGenerator.Tests\bin\Debug">
-				<include name="*" />
-				<include name="**\*.*" />
-			</fileset>
-		</copy>
 		<copy todir="${build.dir}" overwrite="true">
 			<fileset basedir="src\ExcelMapper.Tests\bin\Debug">
 				<include name="*" />
@@ -67,18 +55,10 @@
 		</copy>			
 	</target>	
 	
-	<target name="test" depends="RunTimeCodeGeneratorTests, ExcelMapperTests, BuildDTOsFromExcel" />
+	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcel" />
 	
 	<target name="build" depends="compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
 		
-	<target name="RunTimeCodeGeneratorTests">		
-		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
-			<arg value="RunTimeCodeGenerator.Tests.dll" />
-			<arg value="/xml:RunTimeCodeGeneratorTests.xml" />
-			<arg value="/nologo" />
-		</exec>
-	</target>
-	
 	<target name="ExcelMapperTests">		
 		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
 			<arg value="ExcelMapper.Tests.dll" />
