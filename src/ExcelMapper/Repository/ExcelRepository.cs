@@ -62,11 +62,7 @@ namespace ExcelMapper.Repository
 
         public void SaveOrUpdate<T>(IEnumerable<T> values)
         {
-            if (!_fileService.Exists(_fileConfiguration.FileName))
-            {
-                _fileService.Create(_fileConfiguration.FileName);
-            }
-            if (!_dataProvider.GetTableNames().Where(x => x == typeof(T).Name).Any())
+            if (!_dataProvider.GetTableNames().Where(x => x == typeof (T).Name).Any())
             {
                 _dataProvider.CreateTable<T>();
             }

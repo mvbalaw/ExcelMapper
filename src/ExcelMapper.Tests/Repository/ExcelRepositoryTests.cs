@@ -89,15 +89,6 @@ namespace ExcelMapper.Tests.Repository
             }
 
             [Test]
-            public void Should_create_an_Excel_file_if_it_doesnot_exist()
-            {
-                _fileService.Expect(x => x.Exists(Testfile)).Return(false);
-                _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string>());
-                _excelRepository.SaveOrUpdate(_users);
-                _fileService.AssertWasCalled(x => x.Create(Testfile));
-            }
-
-            [Test]
             public void Should_create_an_Excel_file_if_it_exists()
             {
                 _fileService.Expect(x => x.Exists(Testfile)).Return(true);
