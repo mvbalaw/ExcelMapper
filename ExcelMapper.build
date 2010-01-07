@@ -10,6 +10,8 @@
 	<property name="lib.dir" value="lib" />
 	<property name="BuildDTOsFromExcel.exe" value="BuildDTOsFromExcel.exe" />
 	<property name="Excel.dir" value="src\Samples.Tests\Excel" />
+	<property name="tools.dir" value="tools" />
+	<property name="config" value="Debug" />
 	
 	<!-- User targets -->	
 	<target name="clean" description="Delete Automated Build artifacts">
@@ -25,30 +27,30 @@
 		</msbuild>
 						  
 		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\ExcelMapper\bin\Debug">
+		    <fileset basedir="src\ExcelMapper\bin\${config}">
 				<include name="*.*" />
 		    </fileset>
 		</copy>
 		<copy todir="${build.dir}" overwrite="true">
-		    <fileset basedir="src\BuildDTOsFromExcel\bin\Debug">
+		    <fileset basedir="src\BuildDTOsFromExcel\bin\${config}">
 				<include name="*.*" />
 		    </fileset>
 		</copy>
 
 		<copy todir="${build.dir}" overwrite="true">
-			<fileset basedir="src\ExcelMapper.Tests\bin\Debug">
+			<fileset basedir="src\ExcelMapper.Tests\bin\${config}">
 				<include name="*" />
 				<include name="**\*.*" />
 			</fileset>
 		</copy>
 		<copy todir="${build.dir}" overwrite="true">
-			<fileset basedir="src\BuildDTOsFromExcel.Tests\bin\Debug">
+			<fileset basedir="src\BuildDTOsFromExcel.Tests\bin\${config}">
 				<include name="*" />
 				<include name="**\*.*" />							
 			</fileset>
 		</copy>	
 		<copy todir="${build.dir}" overwrite="true">
-			<fileset basedir="src\Samples.Tests\bin\Debug">
+			<fileset basedir="src\Samples.Tests\bin\${config}">
 				<include name="*" />
 				<include name="**\*.*" />							
 			</fileset>
@@ -58,7 +60,14 @@
 	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcel" />
 	
 	<target name="build" depends="compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
-		
+
+	<target name="merge" depends="clean, compile, test">
+		<mkdir dir="${build.dir}\merge" />
+		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
+				  commandline="/log /out:&quot;${build.dir}\merge\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; &quot;${build.dir}\StructureMap.dll&quot; &quot;${build.dir}\Microsoft.Practices.ServiceLocation.dll&quot; &quot;${build.dir}\RunTimeCodeGenerator.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
+	</target>	
+
+	
 	<target name="ExcelMapperTests">		
 		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
 			<arg value="ExcelMapper.Tests.dll" />
