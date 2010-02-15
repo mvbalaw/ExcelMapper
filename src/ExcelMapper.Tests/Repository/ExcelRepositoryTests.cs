@@ -7,6 +7,7 @@ using ExcelMapper.Tests.DTO;
 using NUnit.Framework;
 using Rhino.Mocks;
 using StructureMap.AutoMocking;
+using ExcelMapper.Repository.Extensions;
 
 namespace ExcelMapper.Tests.Repository
 {
@@ -56,7 +57,7 @@ namespace ExcelMapper.Tests.Repository
         }
 
         [TestFixture]
-        public class When_asked_to_SaveOrUpdate_an_entity_into_an_excel_file
+        public class When_asked_to_Save_an_entity_into_an_excel_file
         {
             private const string Testfile = "TestFile";
             private IDataProvider _dataProvider;
@@ -89,12 +90,12 @@ namespace ExcelMapper.Tests.Repository
             }
 
             [Test]
-            public void Should_create_an_Excel_file_if_it_exists()
+            public void Should_create_an_Excel_file_if_it_doesnot_exists()
             {
                 _fileService.Expect(x => x.Exists(Testfile)).Return(true);
                 _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string>());
 
-                _excelRepository.SaveOrUpdate(_users);
+                _excelRepository.Save(_users);
                 _fileService.AssertWasNotCalled(x => x.Create(Testfile));
             }
 
@@ -104,7 +105,7 @@ namespace ExcelMapper.Tests.Repository
                 _fileService.Expect(x => x.Exists(Testfile)).Return(true);
                 _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string>());
 
-                _excelRepository.SaveOrUpdate(_users);
+                _excelRepository.Save(_users);
                 _dataProvider.AssertWasCalled(x => x.CreateTable<User>());
             }
 
@@ -112,9 +113,9 @@ namespace ExcelMapper.Tests.Repository
             public void Should_not_create_the_WorkSheet_if_it_exists()
             {
                 _fileService.Expect(x => x.Exists(Testfile)).Return(true);
-                _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string> {typeof (User).Name});
+                _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string> {typeof (User).Name.GetWorkSheetName()});
 
-                _excelRepository.SaveOrUpdate(_users);
+                _excelRepository.Save(_users);
                 _dataProvider.AssertWasNotCalled(x => x.CreateTable<User>());
             }
 
@@ -122,9 +123,9 @@ namespace ExcelMapper.Tests.Repository
             public void Should_save_the_values_in_to_excel()
             {
                 _fileService.Expect(x => x.Exists(Testfile)).Return(true);
-                _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string> {typeof (User).Name});
+                _dataProvider.Expect(x => x.GetTableNames()).Return(new List<string> { typeof(User).Name.GetWorkSheetName() });
 
-                _excelRepository.SaveOrUpdate(_users);
+                _excelRepository.Save(_users);
                 _dataProvider.AssertWasCalled(x => x.Put(_users));
             }
         }

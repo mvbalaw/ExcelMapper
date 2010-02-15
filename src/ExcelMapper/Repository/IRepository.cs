@@ -8,7 +8,6 @@ namespace ExcelMapper.Repository
         IEnumerable<string> GetWorkSheetNames();
         ClassAttributes GetDTOClassAttributes(string workSheet);
         IEnumerable<T> Get<T>(string workSheet);
-        void Update<T>(IEnumerable<T> values);
-        void SaveOrUpdate<T>(IEnumerable<T> values);
+        void Save<T>(IEnumerable<T> values);
     }
 }

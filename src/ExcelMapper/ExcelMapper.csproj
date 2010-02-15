@@ -91,12 +91,13 @@
     <Compile Include="Repository\Connection\IConnectionString.cs" />
     <Compile Include="Repository\ExcelRepository.cs" />
     <Compile Include="Repository\Extensions\DataReaderExtensions.cs" />
+    <Compile Include="Repository\Extensions\PropertyTypeExtensions.cs" />
     <Compile Include="Repository\FileService.cs" />
     <Compile Include="Repository\IDataProvider.cs" />
     <Compile Include="Repository\IFileService.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\OleDbDataProvider.cs" />
-    <Compile Include="Repository\StringExtensions.cs" />
+    <Compile Include="Repository\Extensions\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

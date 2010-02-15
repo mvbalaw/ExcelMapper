@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using ExcelMapper.Configuration;
 using ExcelMapper.Repository.Connection;
+using ExcelMapper.Repository.Extensions;
 using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Repository
@@ -77,7 +78,7 @@ namespace ExcelMapper.Repository
                             {
                                 int index = i;
                                 PropertyInfo property = properties.Single(p => p.Name.Equals(reader.GetName(index)));
-                                property.SetValue(instance, reader.GetValue(i), null);
+                                property.SetValue(instance, Convert.ChangeType(reader.GetValue(i), property.PropertyType), null);
                             }
                             yield return instance;
                         }
@@ -141,15 +142,6 @@ namespace ExcelMapper.Repository
             }
             query.Append("?");
             return query.ToString();
-        }
-    }
-
-    public static class PropertyTypeExtensions
-    {
-        public static string GetPropertyType(this Type propertyType)
-        {
-            const string integerType = "Int";
-            return propertyType.Name.Contains(integerType) ? integerType : propertyType.Name;
         }
     }
 }

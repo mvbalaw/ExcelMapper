@@ -59,14 +59,14 @@ namespace Samples.Tests
                                 expectedDemoWorkSheet
                             };
 
-            _repository.SaveOrUpdate(demoWorkSheets);
+            _repository.Save(demoWorkSheets);
 
-            //var enumerable = _repository.Get<DemoWorkSheet>(typeof(DemoWorkSheet).Name);
-            //DemoWorkSheet actualDemoWorkSheet = enumerable.Where(x => x.Id == expectedDemoWorkSheet.Id).First();
-            //Assert.IsNotNull(actualDemoWorkSheet);
-            //Assert.AreEqual(expectedDemoWorkSheet.Name, actualDemoWorkSheet.Name);
-            //Assert.AreEqual(expectedDemoWorkSheet.StartDate, actualDemoWorkSheet.StartDate);
-            //Assert.AreEqual(expectedDemoWorkSheet.StartValue, actualDemoWorkSheet.StartValue);
+            var enumerable = _repository.Get<DemoWorkSheet>(typeof(DemoWorkSheet).Name);
+            DemoWorkSheet actualDemoWorkSheet = enumerable.Where(x => x.Id == expectedDemoWorkSheet.Id).First();
+            Assert.IsNotNull(actualDemoWorkSheet);
+            Assert.AreEqual(expectedDemoWorkSheet.Name, actualDemoWorkSheet.Name);
+            Assert.AreEqual(expectedDemoWorkSheet.StartDate, actualDemoWorkSheet.StartDate);
+            Assert.AreEqual(expectedDemoWorkSheet.StartValue, actualDemoWorkSheet.StartValue);
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace Samples.Tests
                             {
                                 expectedUser
                             };
-            _repository.Update(users);
+            _repository.Save(users);
 
             User actualUser = _repository.Get<User>("User").Where(x => x.Id == expectedUser.Id).First();
             Assert.IsNotNull(actualUser);

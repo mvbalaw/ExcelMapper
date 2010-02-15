@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ExcelMapper.Configuration;
+using ExcelMapper.Repository.Extensions;
 using RunTimeCodeGenerator.ClassGeneration;
 
 namespace ExcelMapper.Repository
@@ -55,14 +56,9 @@ namespace ExcelMapper.Repository
             }
         }
 
-        public void Update<T>(IEnumerable<T> values)
+       public void Save<T>(IEnumerable<T> values)
         {
-            _dataProvider.Put(values);
-        }
-
-        public void SaveOrUpdate<T>(IEnumerable<T> values)
-        {
-            if (!_dataProvider.GetTableNames().Where(x => x == typeof (T).Name).Any())
+           if (!_dataProvider.GetTableNames().Where(x => x == typeof(T).Name.GetWorkSheetName()).Any())
             {
                 _dataProvider.CreateTable<T>();
             }
