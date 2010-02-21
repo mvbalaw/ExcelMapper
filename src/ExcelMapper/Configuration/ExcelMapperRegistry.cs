@@ -8,13 +8,13 @@ namespace ExcelMapper.Configuration
     {
         public ExcelMapperRegistry()
         {
-			ForRequestedType<IDataProvider>()
-				.TheDefaultIsConcreteType<OleDbDataProvider>();
-            ForRequestedType<IRepository>()
-                .TheDefaultIsConcreteType<ExcelRepository>();
-            ForRequestedType<IFileConfiguration>()
-                .AsSingletons()
-                .TheDefaultIsConcreteType<FileConfiguration>();
+			For<IDataProvider>()
+				.Use<OleDbDataProvider>();
+            For<IRepository>()
+                .Use<ExcelRepository>();
+            For<IFileConfiguration>()
+                .Singleton()
+                .Use<FileConfiguration>();
             Scan(s =>
                      {
                          s.AssemblyContainingType<ExcelMapperRegistry>();

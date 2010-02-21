@@ -57,7 +57,7 @@
 		</copy>			
 	</target>	
 	
-	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcel" />
+	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcelTests, SamplesTests" />
 	
 	<target name="build" depends="compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
 
@@ -76,10 +76,18 @@
 		</exec>
 	</target>
 
-	<target name="BuildDTOsFromExcel">
+	<target name="BuildDTOsFromExcelTests">
 		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
 			<arg value="BuildDTOsFromExcel.Tests.dll" />
 			<arg value="/xml:BuildDTOsFromExcelTests.xml" />
+			<arg value="/nologo" />
+		</exec>
+	</target>
+	
+	<target name="SamplesTests">
+		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
+			<arg value="Samples.Tests.dll" />
+			<arg value="/xml:SamplesTests.xml" />
 			<arg value="/nologo" />
 		</exec>
 	</target>

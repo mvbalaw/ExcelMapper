@@ -39,7 +39,7 @@ namespace Samples.Tests
             ServiceLocator.Current.GetInstance<IFileConfiguration>().FileName = UserFile;
             foreach (User user in _repository.Get<User>("User"))
             {
-                Console.WriteLine("Hello {0} {1}", user.FirstName, user.LastName);
+                Console.WriteLine("{0} {1}", user.FirstName, user.LastName);
             }
         }
 
