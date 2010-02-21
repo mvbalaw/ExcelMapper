@@ -49,6 +49,11 @@ namespace ExcelMapper.Repository
                     {
                         if (reader.Read())
                         {
+                            // Empty .xls worksheet returns F1
+                            if (reader.FieldCount == 1 && reader.GetName(0) == "F1")
+                            {
+                                yield break;
+                            }
                             for (int i = 0; i < reader.FieldCount; i++)
                             {
                                 yield return new Property(reader.GetFieldType(i).ToString(),

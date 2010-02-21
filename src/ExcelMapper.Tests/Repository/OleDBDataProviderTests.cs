@@ -134,6 +134,24 @@ namespace ExcelMapper.Tests.Repository
                 Assert.IsNotNull(columns);
                 Assert.IsTrue(columns.Count == 4);
             }
+            
+            [Test]
+            public void Should_return_no_properties_if_the_Xls_worksheet_is_empty()
+            {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsFile);
+                List<Property> columns = _dataProvider.GetColumns(String.Format("{0}$", "Sheet2")).ToList();
+                Assert.IsEmpty(columns);
+                Assert.IsTrue(columns.Count == 0);
+            }
+            
+            [Test]
+            public void Should_return_no_properties_if_the_Xlsx_worksheet_is_empty()
+            {
+                _fileConfiguration.Expect(x => x.FileName).Return(_xlsxFile);
+                List<Property> columns = _dataProvider.GetColumns(String.Format("{0}$", "Sheet2")).ToList();
+                Assert.IsEmpty(columns);
+                Assert.IsTrue(columns.Count == 0);
+            }
         }
 
         [TestFixture]

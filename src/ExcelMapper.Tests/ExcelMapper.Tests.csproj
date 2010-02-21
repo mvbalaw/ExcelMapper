@@ -89,6 +89,7 @@
     <Compile Include="Repository\Connection\ConnectionTests.cs" />
     <Compile Include="Repository\OleDbDataProviderTests.cs" />
     <Compile Include="Repository\ExcelRepositoryTests.cs" />
+    <Compile Include="SystemTest.cs" />
     <Compile Include="TestData.cs" />
   </ItemGroup>
   <ItemGroup>

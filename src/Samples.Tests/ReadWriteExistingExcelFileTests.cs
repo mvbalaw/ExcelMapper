@@ -43,7 +43,7 @@ namespace Samples.Tests
             }
         }
 
-        [Test, Explicit]
+        [Test]
         public void WriteToExcel()
         {
             ServiceLocator.Current.GetInstance<IFileConfiguration>().FileName = DemoWorkSheetFile;
