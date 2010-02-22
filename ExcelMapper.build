@@ -4,6 +4,7 @@
 	<!-- PROPERTIES -->
 	<property name ="current.dir" value="${directory::get-current-directory()}" />
 	<property name="build.dir" value="build" />
+	<property name="release.dir" value="release" />
 	<property name="nunit-console.exe" value="tools\nunit\bin\nunit-console-x86.exe" />	
 	<property name="excel.dir" value="Excel" />
 	<property name="include.dir" value="Templates\Include" />
@@ -57,17 +58,6 @@
 		</copy>			
 	</target>	
 	
-	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcelTests, SamplesTests" />
-	
-	<target name="build" depends="compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
-
-	<target name="merge" depends="clean, compile, test">
-		<mkdir dir="${build.dir}\merge" />
-		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
-				  commandline="/log /out:&quot;${build.dir}\merge\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; &quot;${build.dir}\StructureMap.dll&quot; &quot;${build.dir}\Microsoft.Practices.ServiceLocation.dll&quot; &quot;${build.dir}\RunTimeCodeGenerator.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
-	</target>	
-
-	
 	<target name="ExcelMapperTests">		
 		<exec program="${nunit-console.exe}" workingdir="${build.dir}">
 			<arg value="ExcelMapper.Tests.dll" />
@@ -102,5 +92,46 @@
 				<include name="ExcelToDTOMapper.DTO.dll" />
 			</fileset>
 		</copy>	
+	</target>
+	
+	<target name="test" depends="ExcelMapperTests, BuildDTOsFromExcelTests, SamplesTests" />
+	
+	<target name="build" depends="clean, compile, test, updateSampleExcel" description="Clean, Compile, run tests" />
+	
+	<target name="full" depends="build, unmerged-release, release" description="Build and zip the distributable files" />
+
+	<target name="unmerged-release" depends="build">
+		<mkdir dir="${build.dir}\unmerged-release" />
+		
+		<copy todir="${build.dir}\unmerged-release">
+			<fileset basedir="${build.dir}">
+				<include name="BuildDTOsFromExcel.exe" />
+				<include name="StructureMap.dll" />
+				<include name="Microsoft.Practices.ServiceLocation.dll" />
+				<include name="RunTimeCodeGenerator.dll" />
+			</fileset>
+		</copy>
+
+		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
+				  commandline="/log /out:&quot;${build.dir}\unmerged-release\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
+		
+		<zip zipfile="${release.dir}\unmerged-excelmapper.zip">
+			<fileset basedir="${build.dir}\unmerged-release" prefix="unmerged-release">
+				<include name="**/*" />
+			</fileset>			
+		</zip>	
+	</target>
+	
+	<target name="release" depends="build">
+		<mkdir dir="${build.dir}\release" />
+		
+		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
+				  commandline="/log /out:&quot;${build.dir}\release\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; &quot;${build.dir}\StructureMap.dll&quot; &quot;${build.dir}\Microsoft.Practices.ServiceLocation.dll&quot; &quot;${build.dir}\RunTimeCodeGenerator.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
+		
+		<zip zipfile="${release.dir}\excelmapper.zip">
+			<fileset basedir="${build.dir}\release" prefix="release">
+				<include name="**/*" />
+			</fileset>			
+		</zip>
 	</target>
 </project>
