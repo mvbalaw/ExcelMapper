@@ -114,6 +114,8 @@
 
 		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
 				  commandline="/log /out:&quot;${build.dir}\unmerged-release\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
+
+		<delete file="${build.dir}\unmerged-release\ExcelMapper.pdb" />
 		
 		<zip zipfile="${release.dir}\unmerged-excelmapper.zip">
 			<fileset basedir="${build.dir}\unmerged-release" prefix="unmerged-release">
@@ -127,6 +129,14 @@
 		
 		<exec program="${tools.dir}\ILMerge\ilmerge.exe"
 				  commandline="/log /out:&quot;${build.dir}\release\ExcelMapper.dll&quot; &quot;${build.dir}\ExcelMapper.dll&quot; &quot;${build.dir}\StructureMap.dll&quot; &quot;${build.dir}\Microsoft.Practices.ServiceLocation.dll&quot; &quot;${build.dir}\RunTimeCodeGenerator.dll&quot; /keyfile:&quot;${current.dir}\ExcelMapper.snk&quot;" workingdir="." />
+		
+		<copy todir="${build.dir}\release">
+			<fileset basedir="${build.dir}">
+				<include name="BuildDTOsFromExcel.exe" />
+			</fileset>
+		</copy>
+		
+		<delete file="${build.dir}\release\ExcelMapper.pdb" />
 		
 		<zip zipfile="${release.dir}\excelmapper.zip">
 			<fileset basedir="${build.dir}\release" prefix="release">
